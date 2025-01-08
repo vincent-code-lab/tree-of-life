@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visualisation interactive de l'Arbre de Vie Séphirotique">
+  <title>Arbre de Vie</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Lien vers la feuille de style -->
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.1">
+  <!-- Lien vers l'icone de la page -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+</head>
+<body>
+  <!-- Message d'avertissement pour les navigateurs ne supportant pas JavaScript -->
+  <noscript>
+    <p>Cette application nécessite JavaScript pour fonctionner correctement. Veuillez activer JavaScript dans votre navigateur.</p>
+  </noscript>
+
+  <!-- Début  :  Conteneur principal pour gérer la flexibilité entre le titre et l'arbre -->
+  <div class="main-container">
+    <!-- Le titre sera remplacé par le contenu JSON via JavaScript -->
+    <h1 class="main-title" id="main-title">Chargement du titre...</h1>
+    <!-- Début : Conteneur interactif -->
+     
+    <div class="container" id="container">
+
+      <!-- Canevas utilisé pour dessiner les chemins entre les Séphiroth -->
+      <canvas id="pathCanvas"></canvas>
+      
+      <canvas id="flameCanvas"></canvas>    
+      <canvas id="flameCanvas2"></canvas>      
+      <canvas id="malkuthFlameCanvas"></canvas>
+      <canvas id="geburahFlameCanvas"></canvas>
+      <canvas id="hesedWaterCanvas"></canvas>
+      <canvas id="crystalsCanvas"></canvas>
+
+      <!-- Les 10 séphiroth existantes -->
+      <div class="sephirah item1" id="item1"></div>
+      <!-- Canvas pour les particules dorées autour de Kether -->
+      <canvas id="ketherParticlesCanvas"></canvas>
+      <div class="sephirah" id="item2"></div>
+      <div class="sephirah" id="item3"></div>
+      <div class="sephirah" id="item4"></div>
+      <div class="sephirah" id="item5"></div>
+      <div class="sephirah" id="item6"></div>
+      <div class="sephirah" id="item7"></div>
+      <div class="sephirah" id="item8"></div>
+      <div class="sephirah" id="item9"></div>
+      <div class="sephirah" id="item10"></div>
+      <!-- Daath (non-numérotée, cercle en pointillé) -->
+      <div class="sephirah daath" id="daath"></div>     
+    </div>
+    <!-- Fin : Conteneur interactif -->   
+
+    <!-- Tooltip global (infobulles) des éléments -->
+    <div class="tooltip" id="tooltip"></div>
+   
+  </div>
+  <!-- Fin : Conteneur principal -->
+
+
+  <!-- Bouton plein écran-->
+  <div class="fullscreen-button hidden" id="fullscreenToggle">
+    <i class="fas fa-expand" id="fullscreenIcon"></i>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/toggle-fullscreen.js?v=1.0.1" defer></script>
+  <script src="assets/js/display-tree.js?v=1.0.1" defer></script>
+  <script src="assets/js/sound-manager.js?v=1.0.1" defer></script>
+</body>
+</html>
