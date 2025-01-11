@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Visualisation interactive de l'Arbre de Vie Séphirotique">
+  <!-- Meta tags pour empêcher la mise en cache --> 
+  <meta http-equiv="Cache-Control" content="no-store"> 
+  <meta http-equiv="Pragma" content="no-cache"> 
+  <meta http-equiv="Expires" content="0">
+  
   <title>Arbre de Vie</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <!-- Lien vers la feuille de style -->
-  <link rel="stylesheet" href="assets/css/style.css?v=1.0.1">
+  <!-- Lien vers les feuilles de style -->
+  <link rel="stylesheet" href="assets/css/general.css?v=1.0.1">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0.1">
+
+
+
+
   <!-- Lien vers l'icone de la page -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
@@ -24,13 +34,11 @@
   <div class="main-container">
     <!-- Le titre sera remplacé par le contenu JSON via JavaScript -->
     <h1 class="main-title" id="main-title">Chargement du titre...</h1>
-    <!-- Début : Conteneur interactif -->
-     
+    <!-- Début : Conteneur interactif -->     
     <div class="container" id="container">
 
       <!-- Canevas utilisé pour dessiner les chemins entre les Séphiroth -->
-      <canvas id="pathCanvas"></canvas>
-      
+      <canvas id="pathCanvas"></canvas>      
       <canvas id="flameCanvas"></canvas>    
       <canvas id="flameCanvas2"></canvas>      
       <canvas id="malkuthFlameCanvas"></canvas>
@@ -61,16 +69,22 @@
    
   </div>
   <!-- Fin : Conteneur principal -->
-
-
   <!-- Bouton plein écran-->
-  <div class="fullscreen-button hidden" id="fullscreenToggle">
+  <div class="fullscreen-button hidden" id="fullscreenToggle" title="Plein écran (f)">
     <i class="fas fa-expand" id="fullscreenIcon"></i>
   </div>
+  <div class="sound-control-button hidden" id="soundControlToggle" title="Fond sonore (m)">
+    <i class="fas fa-volume-up" id="soundControlIcon"></i>
+    <input type="range" id="volumeSlider" class="hidden">
+  </div>
+
 
   <!-- Scripts -->
   <script src="assets/js/toggle-fullscreen.js?v=1.0.1" defer></script>
   <script src="assets/js/display-tree.js?v=1.0.1" defer></script>
   <script src="assets/js/sound-manager.js?v=1.0.1" defer></script>
+  <script src="assets/js/toggle-sound.js?v=1.0.1" defer></script>
+ 
+  
 </body>
 </html>

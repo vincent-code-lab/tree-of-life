@@ -1,0 +1,46 @@
+/*
+Responsive design
+*/
+@media (max-width: 650px) {
+
+  :root {
+    --sephirah-size: min(15vw, 60px);
+    --font-size: min(2.5vw, 8px);
+    --label-font-size: min(2vw, 8px);
+  }
+  
+  
+  h1 {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  #ketherParticlesCanvas {
+    display: none;
+  }
+  
+  .container {
+   height: calc(100vh - 6rem);
+
+
+    }
+  }
+  
+  @media (max-width: 500px) {
+  
+    :root {
+      --sephirah-size: min(20vw, 52px);
+    }
+  h1 {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .container {
+    height: calc(100vh - 7rem);
+  }
+  }
+  
