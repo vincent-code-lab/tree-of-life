@@ -4,71 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Visualisation interactive de l'Arbre de Vie Séphirotique">
-  <!-- Meta tags pour empêcher la mise en cache --> 
-  <meta http-equiv="Cache-Control" content="no-store"> 
-  <meta http-equiv="Pragma" content="no-cache"> 
-  <meta http-equiv="Expires" content="0">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" href="assets/img/favicon/android-chrome-192x192.png">
+  <meta name="keywords" content="Kabbale, Arbre de Vie, Sephiroth, spiritualité, etc.">
+  <meta name="author" content="Vincent">  
+  <meta name="robots" content="index, follow">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
   
-  <title>Arbre de Vie</title>
+
+  <!-- Meta tags pour empêcher la mise en cache pour la phase de développement et testes  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache"> 
+  <meta http-equiv="Expires" content="0">--> 
+  
+  <title>Arbre de Vie</title> 
+  
+  <!-- Liens des polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
   <!-- Lien vers les feuilles de style -->
-  <link rel="stylesheet" href="assets/css/general.css?v=1.0.1">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0.1">
-
-
-
+  <link rel="stylesheet" href="assets/css/general.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 
   <!-- Lien vers l'icone de la page -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+ 
 </head>
 <body>
   <!-- Message d'avertissement pour les navigateurs ne supportant pas JavaScript -->
   <noscript>
-    <p>Cette application nécessite JavaScript pour fonctionner correctement. Veuillez activer JavaScript dans votre navigateur.</p>
+    <p lang="en">English : This application requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
+    <p lang="fr">Français : Cette application nécessite JavaScript pour fonctionner correctement. Veuillez activer JavaScript dans votre navigateur.</p>
   </noscript>
 
-  <!-- Début  :  Conteneur principal pour gérer la flexibilité entre le titre et l'arbre -->
-  <div class="main-container">
-    <!-- Le titre sera remplacé par le contenu JSON via JavaScript -->
-    <h1 class="main-title" id="main-title">Chargement du titre...</h1>
-    <!-- Début : Conteneur interactif -->     
-    <div class="container" id="container">
+    <!-- Vidéo en arrière-plan -->
+    <!-- <video class="video-body" autoplay muted loop playsinline>
+      <source src="assets/video/fond-papesse.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas les vidéos HTML5.
+    </video> -->
 
-      <!-- Canevas utilisé pour dessiner les chemins entre les Séphiroth -->
-      <canvas id="pathCanvas"></canvas>      
-      <canvas id="flameCanvas"></canvas>    
-      <canvas id="flameCanvas2"></canvas>      
-      <canvas id="malkuthFlameCanvas"></canvas>
+  <header class="site-header" id="site-header">
+       <!-- Bouton de rechargement forcé (visible uniquement en développement) -->
+       <!-- <div class="reload-button" id="reloadButton" title="Forcer le rechargement">
+         <i class="fas fa-sync-alt"></i>
+       </div> -->
+      <div id="loading" class="loader"></div>
+      <!-- Le titre sera remplacé par le contenu JSON via JavaScript -->
+      <h1 class="main-title" id="main-title">Chargement du titre...</h1>     
+  
+      <div class="language-menu" id="language-menu" onclick="toggleMenu()" role="button" aria-haspopup="true" aria-expanded="false">
+          <span id="current-lang">Langue</span>
+          <span class="arrow">▼</span>
+          <ul class="dropdown" id="dropdown" aria-hidden="true">
+              <li onclick="changeLanguage('fr')" role="menuitem" >Français (FR)</li>
+              <li onclick="changeLanguage('en')" role="menuitem" >English (EN)</li>
+              <li onclick="changeLanguage('he')" role="menuitem" >עברית (HE)</li>
+          </ul>
+      </div>
+  </header>
+  <!-- Début  :  Conteneur principal pour gérer la flexibilité entre le titre et l'arbre -->
+  <main class="main-container" role="main" aria-label="Arbre de Vie Séphirotique">
+
+<!-- <iframe src="assets/img/tarot/1.svg" width="600" height="1000"></iframe> -->
+<!-- <embed src="assets/img/tarot/1.svg" width="600" height="1000" type="image/svg+xml"> -->
+
+    <!-- Début : Conteneur interactif -->     
+    <section class="container" id="container">
+      <!-- Canevas utilisé pour dessiner les chemins entre les Séphiroth -->        
+      <canvas id="tipherethSunCanvas"></canvas>    
+      <canvas id="flameCanvas2"></canvas>               
       <canvas id="geburahFlameCanvas"></canvas>
       <canvas id="hesedWaterCanvas"></canvas>
       <canvas id="crystalsCanvas"></canvas>
-
+      
+      <canvas id="pathCanvas"></canvas>
+     
       <!-- Les 10 séphiroth existantes -->
-      <div class="sephirah item1" id="item1"></div>
+      <div class="sephirah item1" id="item1" tabindex="0"></div>
       <!-- Canvas pour les particules dorées autour de Kether -->
       <canvas id="ketherParticlesCanvas"></canvas>
-      <div class="sephirah" id="item2"></div>
-      <div class="sephirah" id="item3"></div>
-      <div class="sephirah" id="item4"></div>
-      <div class="sephirah" id="item5"></div>
-      <div class="sephirah" id="item6"></div>
-      <div class="sephirah" id="item7"></div>
-      <div class="sephirah" id="item8"></div>
-      <div class="sephirah" id="item9"></div>
-      <div class="sephirah" id="item10"></div>
+      <div class="sephirah item2" id="item2" tabindex="0"></div>
+      <div class="sephirah item3" id="item3" tabindex="0"></div>
+      <div class="sephirah item4" id="item4" tabindex="0"></div>
+      <div class="sephirah item5" id="item5" tabindex="0"></div>
+      <div class="sephirah item6" id="item6" tabindex="0"></div>
+      <div class="sephirah item7" id="item7" tabindex="0"></div>
+      <div class="sephirah item8" id="item8" tabindex="0"></div>
+      <div class="sephirah item9" id="item9" tabindex="0"></div>
+      <div class="sephirah item10" id="item10" tabindex="0"></div>
       <!-- Daath (non-numérotée, cercle en pointillé) -->
-      <div class="sephirah daath" id="daath"></div>     
-    </div>
+      <div class="sephirah daath" id="daath" tabindex="0"></div> 
+    </section>
     <!-- Fin : Conteneur interactif -->   
-
     <!-- Tooltip global (infobulles) des éléments -->
-    <div class="tooltip" id="tooltip"></div>
-   
-  </div>
+    <div class="tooltip" id="tooltip" role="tooltip" aria-live="polite"></div>   
+  </main>
   <!-- Fin : Conteneur principal -->
+  
+  
+<footer>
   <!-- Bouton plein écran-->
   <div class="fullscreen-button hidden" id="fullscreenToggle" title="Plein écran (f)">
     <i class="fas fa-expand" id="fullscreenIcon"></i>
@@ -77,14 +117,38 @@
     <i class="fas fa-volume-up" id="soundControlIcon"></i>
     <input type="range" id="volumeSlider" class="hidden">
   </div>
+  <!-- <div class="reset-button hidden" id="resetDataButton" title="Réinitialiser les données">
+    <i class="fas fa-undo"></i>
+  </div> -->
+</footer>
 
+ <!-- Preload critique -->
+<!-- <link rel="preload" as="script" href="assets/js/dev-version.js"> -->
+<link rel="preload" as="script" href="assets/js/performance-check.js">
+<link rel="preload" as="script" href="assets/js/display-tree.js">
 
-  <!-- Scripts -->
-  <script src="assets/js/toggle-fullscreen.js?v=1.0.1" defer></script>
-  <script src="assets/js/display-tree.js?v=1.0.1" defer></script>
-  <script src="assets/js/sound-manager.js?v=1.0.1" defer></script>
-  <script src="assets/js/toggle-sound.js?v=1.0.1" defer></script>
- 
-  
+<!-- Preload UI -->
+<link rel="preload" as="script" href="assets/js/tooltip.js">
+<link rel="preload" as="script" href="assets/js/haptic-feedback.js">
+
+<!-- Scripts critiques -->
+<!-- <script src="assets/js/dev-version.js" defer></script> -->
+<script src="assets/js/performance-check.js" defer></script>
+<script src="assets/js/display-tree.js" defer></script>
+<script src="assets/js/tooltip.js" defer></script>
+<script src="assets/js/haptic-feedback.js" defer></script>
+
+<!-- Scripts dépendants -->
+<script src="assets/js/animation-tree.js" defer></script>
+<script src="assets/js/sound-manager.js" defer></script>
+
+<!-- Utilitaires -->
+<script src="assets/js/store-manager.js" defer></script>
+<script src="assets/js/toggle-sound.js" defer></script>
+<script src="assets/js/toggle-fullscreen.js" defer></script>
+<script src="assets/js/toggle-language.js" defer></script>
+<script src="assets/js/click-feedback.js" defer></script>
+<script src="assets/js/toggle-debug.js" defer></script>
+
 </body>
 </html>

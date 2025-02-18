@@ -53,6 +53,11 @@ function exitFullscreen() {
 function setFullscreenState(isFullscreen) {
     updateFullscreenIcon(isFullscreen);
     playFullscreenSound(isFullscreen ? 'assets/audio/pleinecran.mp3' : 'assets/audio/quitterpleinecran.mp3');
+    
+    // Ajout du retour haptique
+    if (HapticFeedback && HapticFeedback.isSupported) {
+        HapticFeedback.trigger('fullscreen');
+    }
 }
 
 /**

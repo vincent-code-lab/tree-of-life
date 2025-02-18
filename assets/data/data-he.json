@@ -1,0 +1,569 @@
+{
+  "metadata": {
+    "author": "Vincent",
+    "version": "1.0",
+    "description": "ייצוג של 32 הנתיבים מעץ החיים הקבליסטי",
+    "date": "2025-01-04",
+    "language": "he",
+    "lastUpdate": "2025-01-18"
+  },
+
+  "pageTitle": {
+    "pageTitleTxt": "עץ החיים (עץ החיים): 32 נתיבי חכמה",
+    "tooltipTitleTxt": "10 ספירות (כדורים אלוהיים) ו-22 נתיבים של עץ החיים, המסמלים את ההיבטים והקשרים של היקום על פי הקבלה"
+  },
+
+  "infinitySymbol": {
+    "infinitySymbolTxt": "אין סוף",
+    "tooltipinfiniSymbolTxt": "'האין סוף'"
+  },
+
+  "pillars": {
+  "pillarLeftTxt": "[ גבורה (Severity) ]",
+  "pillarCenterTxt": "[ איזון (Central) ]",
+  "pillarRightTxt": "[ חסד (Mercy) ]",
+  "tooltipPillarLeftTxt": "עמוד הגבורה: צדק, עוצמה, משמעת והגבלה אלוהית",
+  "tooltipPillarCenterTxt": "עמוד ההרמוניה: איזון מושלם, תיווך, תודעה ורצון אלוהיים",
+  "tooltipPillarRightTxt": "עמוד החסד: חמלה, אהבה, רחמים והתפשטות אלוהית",
+  "pillarLeftDescription": "גבורה - העמוד של הכוח שמבנה ומגביל",
+  "pillarCenterDescription": "אמצע - העמוד המרכזי המהרמוניז ומאוזן",
+  "pillarRightDescription": "חסד - העמוד של האהבה שנותן ומתפשט",
+  "pillarLeftColor": "#ff0000",
+  "pillarCenterColor": "#ffffff",
+  "pillarRightColor": "#0000ff"
+},
+
+ 
+
+  "sephiroth": [
+    {
+      "num": 1,
+      "id": "item1",
+      "name": "כתר",
+      "hebrew": "כתר",
+      "translation": "כתר",
+      "tooltip": "הכתר, המקור האלוהי (העיקרון העליון)",
+      "path": "<strong>סכל מובלא (תודעה יוצאת דופן)</strong>: יכולת טרנסצנדנטלית המאפשרת תפיסה של מסתורי האל וממשות עליונה",
+      "planet": "נפטון",
+      "astrology": "אינטואיציה, רוחניות",
+      "glyph": "♆"
+    },
+    {
+      "num": 2,
+      "id": "item2",
+      "name": "חכמה",
+      "hebrew": "חכמה",
+      "translation": "חכמה",
+      "tooltip": "חכמה אלוהית (פוריות)",
+      "path": "<strong>סכל מזהיר (תודעה זוהרת)</strong>: אור פנימי המאור את ההבנה וחושף את יופי האמת הנסתרת",
+      "planet": "אורנוס",
+      "astrology": "השראה, טרנסצנדנציה",
+      "glyph": "♅"
+    },
+    {
+      "num": 3,
+      "id": "item3",
+      "name": "בינה",
+      "hebrew": "בינה",
+      "translation": "תבונה",
+      "tooltip": "הבנה (התגלות)",
+      "path": "<strong>סכל מקודש (תודעה מקודשת)</strong>: טוהר רוחני המעלה את הנפש ומחברת לקדושה",
+      "planet": "שבתאי",
+      "astrology": "מבנה, משמעת",
+      "glyph": "♄"
+    },
+    {
+      "num": 4,
+      "id": "item4",
+      "name": "חסד",
+      "hebrew": "חסד",
+      "translation": "חסד",
+      "tooltip": "חסד וטוב לב (החייאה)",
+      "path": "<strong>סכל קבועה (תודעה קבועה)</strong>: יציבות רוחנית המבססת הבנה מתמשכת ובלתי משתנה",
+      "planet": "צדק",
+      "astrology": "התפשטות, נדיבות",
+      "glyph": "♃"
+    },
+    {
+      "num": 5,
+      "id": "item5",
+      "name": "גבורה",
+      "hebrew": "גבורה",
+      "translation": "גבורה",
+      "tooltip": "גבורה ועוצמה (הגבלה)",
+      "path": "<strong>סכל נשרש (תודעה מושרשת)</strong>: חכמה מושרשת עמוק, המציעה יציבות וחיבור ליסודות רוחניים",
+      "planet": "מאדים",
+      "astrology": "כוח, פעולה",
+      "glyph": "♂"
+    },
+    {
+      "num": 6,
+      "id": "item6",
+      "name": "תפארת",
+      "hebrew": "תפארת",
+      "translation": "תפארת",
+      "tooltip": "יופי והרמוניה (איחוד)",
+      "path": "<strong>סכל שפע נבדל (תודעת השפע הנבדל)</strong>: תפיסה המבחינה בזרמים רוחניים נפרדים ובהשפעותיהם הייחודיות",
+      "planet": "שמש",
+      "astrology": "חיוניות, מרכזיות",
+      "glyph": "☉"
+    },
+    {
+      "num": 7,
+      "id": "item7",
+      "name": "נצח",
+      "hebrew": "נצח",
+      "translation": "נצח",
+      "tooltip": "נצח ואורך רוח (הרמוניה)",
+      "path": "<strong>סכל נסתר (תודעה נסתרת)</strong>: חכמה מוסתרת, המגלה אמיתות עמוקות דרך מסתורין והתבוננות פנימית",
+      "planet": "נוגה",
+      "astrology": "אהבה, התמד",
+      "glyph": "♀"
+    },
+    {
+      "num": 8,
+      "id": "item8",
+      "name": "הוד",
+      "hebrew": "הוד",
+      "translation": "הוד",
+      "tooltip": "תהילה והדר (תיווך)",
+      "path": "<strong>סכל שלם (תודעה שלמה)</strong>: הרמוניה מושלמת המאחדת חכמה ואינטואיציה בהבנה מוחלטת",
+      "planet": "כוכב חמה",
+      "astrology": "תקשורת, ניתוח",
+      "glyph": "☿"
+    },
+    {
+      "num": 9,
+      "id": "item9",
+      "name": "יסוד",
+      "hebrew": "יסוד",
+      "translation": "יסוד",
+      "tooltip": "יסוד (גיבוש)",
+      "path": "<strong>סכל טהור (תודעה טהורה)</strong>: בהירות ללא אשמה המרוממת את הרוח ותופסת אמיתות רוחניות ללא עיוות או מכשול",
+      "planet": "ירח",
+      "astrology": "רגש, תת-מודע",
+      "glyph": "☽"
+    },
+    {
+      "num": 10,
+      "id": "item10",
+      "name": "מלכות",
+      "hebrew": "מלכות",
+      "translation": "מלכות",
+      "tooltip": "המלכות, המימוש (התגלמות)",
+      "path": "<strong>סכל מנצץ (תודעה מנצצת)</strong>: אינטואיציה חיה ובהירה, החושפת ניצוצות של חכמה רוחנית",
+      "planet": "ארץ",
+      "astrology": "מימוש, מציאות פיזית",
+      "glyph": "⊕"
+    },
+    {
+      "id": "daath",
+      "name": "דעת",
+      "hebrew": "דעת",
+      "translation": "דעת",
+      "tooltip": "דעת נסתרת",
+      "planet": "פלוטו",
+      "astrology": "טרנספורמציה, מסתורין",
+      "glyph": "♇"
+    }
+  ],
+
+  "cineroth": [
+    {
+      "num": 11,
+      "id": "item11",
+      "connection": {       
+        "startId": "item1",
+        "endId": "item2",
+        "description": "כתר לחכמה, מייצג את הנשימה האלוהית"
+      },
+      "letter": { "number": 1, "hebrew": "א", "name": "אלף", "meaning": "שור" },
+      "tarot": {
+        "name": "הקוסם",
+        "number": 1,
+        "symbolism": "מייצג פוטנציאל והתחלה"
+      },
+      "consciousness": "תודעה צלולה, בהירות מוחלטת שתופסת אמיתות ללא עיוות או מכשול",
+      "yetsiratic": { "correspondence": "אוויר", "glyph": "△̲", "meaning": "הרוח" },
+      "cinerMeaning": "מייצג את הנשימה האלוהית המעוררת חכמה"
+    },
+    {
+      "num": 12,
+      "id": "item12",
+      "connection": {
+        "startId": "item1",
+        "endId": "item3",
+        "description": "כתר לבינה, מסמל את הבריאה"
+      },
+      "letter": { "number": 2, "hebrew": "ב", "name": "בית", "meaning": "בית" },
+      "tarot": {
+        "name": "הכוהנת הגדולה",
+        "number": 2,
+        "symbolism": "מייצגת ידע וחכמה"
+      },
+      "consciousness": "תודעה צלולה, תפיסה מוארת המבדילה בין חכמה נסתרת בבריאה",
+      "yetsiratic": { "correspondence": "שבתאי", "glyph": "♄", "meaning": "חומר" },
+      "cinerMeaning": "מייצג את בריאת היקום והחומר"
+    },
+    {
+      "num": 13,
+      "id": "item13",
+      "connection": {
+        "startId": "item1",
+        "endId": "item6",
+        "description": "כתר לתפארת, מגלם איזון"
+      },
+      "letter": { "number": 3, "hebrew": "ג", "name": "גימל", "meaning": "גמל" },
+      "tarot": {
+        "name": "הקיסרית",
+        "number": 3,
+        "symbolism": "מייצגת שפע ויצירתיות"
+      },
+      "consciousness": "תודעה מאחדת, לכידות עמוקה המחבקת את כל האנרגיות למזוגן להרמוניה מוחלטת",
+      "yetsiratic": { "correspondence": "צדק", "glyph": "♃", "meaning": "חיים" },
+      "cinerMeaning": "מגלם את האיזון בין הכוחות הקוסמיים"
+    },
+    {
+      "num": 14,
+      "id": "item14",
+      "connection": {
+        "startId": "item2",
+        "endId": "item3",
+        "description": "חכמה לבינה, מסמל את שער ההבנה"
+      },
+      "letter": { "number": 4, "hebrew": "ד", "name": "דלת", "meaning": "דלת" },
+      "tarot": {
+        "name": "הקיסר",
+        "number": 4,
+        "symbolism": "מייצג יציבות וסמכות"
+      },
+      "consciousness": "תודעה מוארת, זוהר פנימי החושף חכמה נסתרת ומרחיב את הפרספקטיבה של הנשמה",
+      "yetsiratic": { "correspondence": "מאדים", "glyph": "♂", "meaning": "צורה" },
+      "cinerMeaning": "מייצג את המעבר לידיעה עמוקה יותר"
+    },
+    {
+      "num": 15,
+      "id": "item15",
+      "connection": {
+        "startId": "item2",
+        "endId": "item6",
+        "description": "חכמה לתפארת, מגלם התפשטות אלוהית"
+      },
+      "letter": { "number": 5, "hebrew": "ה", "name": "הה", "meaning": "חלון" },
+      "tarot": {
+        "name": "ההירופנט",
+        "number": 5,
+        "symbolism": "מייצג חכמה ורוחניות"
+      },
+      "consciousness": "תודעה מייצבת, איזון עדין התומך בהתפתחות רוחנית ומחזק את השלום הפנימי",
+      "yetsiratic": { "correspondence": "טלה", "glyph": "♈", "meaning": "רצון" },
+      "cinerMeaning": "מגלם את התפשטות הרוח האלוהית ביקום"
+    },
+    {
+      "num": 16,
+      "id": "item16",
+      "connection": {
+        "startId": "item2",
+        "endId": "item4",
+        "description": "חכמה לחסד, מגלם את הקשר שבין שמים וארץ"
+      },
+      "letter": { "number": 6, "hebrew": "ו", "name": "ואו", "meaning": "פטיש" },
+      "tarot": {
+        "name": "האוהבים",
+        "number": 6,
+        "symbolism": "מייצג אהבה וקשר"
+      },
+      "consciousness": "תודעה הודית, התעלות רוחנית החוגגת את האיחוד שבין השמיים והארץ במימוש האלוהי",
+      "yetsiratic": { "correspondence": "שור", "glyph": "♉", "meaning": "חומר" },
+      "cinerMeaning": "מבטא את האיחוד של כוחות ארציים ואלוהיים"
+    },
+    {
+      "num": 17,
+      "id": "item17",
+      "connection": {
+        "startId": "item3",
+        "endId": "item6",
+        "description": "בינה לתפארת, מסמל את המאבק לאיזון"
+      },
+      "letter": { "number": 7, "hebrew": "ז", "name": "זין", "meaning": "חרב" },
+      "tarot": {
+        "name": "המרכבה",
+        "number": 7,
+        "symbolism": "מייצגת ניצחון ושליטה"
+      },
+      "consciousness": "תודעה רגישה, תפיסה מעוררת הבוחנת את עומק החוויות להשגת הרמוניה פנימית",
+      "yetsiratic": { "correspondence": "תאומים", "glyph": "♊", "meaning": "מחשבה" },
+      "cinerMeaning": "מגלמת את החיפוש אחר איזון פנימי, ניצחון על העצמי"
+    },
+    {
+      "num": 18,
+      "id": "item18",
+      "connection": {
+        "startId": "item3",
+        "endId": "item5",
+        "description": "בינה לגבורה, מייצג את הכוח הפנימי"
+      },
+      "letter": { "number": 8, "hebrew": "ח", "name": "חית", "meaning": "סגור" },
+      "tarot": {
+        "name": "צדק",
+        "number": 8,
+        "symbolism": "מייצג הוגנות ואיזון"
+      },
+      "consciousness": "תודעה מגנה, זרם אנרגיה המחזק את הרוח ותומך במשמעת בחיפוש אחר הצדק",
+      "yetsiratic": { "correspondence": "סרטן", "glyph": "♋", "meaning": "זיכרון" },
+      "cinerMeaning": "מסמל הגנה ומשמעת"
+    },
+    {
+      "num": 19,
+      "id": "item19",
+      "connection": {
+        "startId": "item4",
+        "endId": "item5",
+        "description": "חסד לגבורה, מגלם את האיזון שבין חסד לגבורה"
+      },
+      "letter": { "number": 9, "hebrew": "ט", "name": "טית", "meaning": "נחש" },
+      "tarot": {
+        "name": "הנזיר",
+        "number": 9,
+        "symbolism": "מייצג חכמה פנימית"
+      },
+      "consciousness": "תודעה פנימית, אור עדין המנחה את חיפוש האמת ומזין חכמה אותנטית",
+      "yetsiratic": { "correspondence": "אריה", "glyph": "♌", "meaning": "יצירתיות" },
+      "cinerMeaning": "מאייר את החיפוש אחר אמת רוחנית"
+    },
+    {
+      "num": 20,
+      "id": "item20",
+      "connection": {
+        "startId": "item4",
+        "endId": "item6",
+        "description": "חסד לתפארת, מסמל את דרך הרחמים"
+      },
+      "letter": { "number": 10, "hebrew": "י", "name": "יוד", "meaning": "יד" },
+      "tarot": {
+        "name": "גלגל המזל",
+        "number": 10,
+        "symbolism": "מייצג גורל ומחזוריות"
+      },
+      "consciousness": "תודעה מחזורית, הבנה עמוקה של קצבי החיים והיעוד האלוהי",
+      "yetsiratic": { "correspondence": "בתולה", "glyph": "♍", "meaning": "פעולה" },
+      "cinerMeaning": "מסמל את מחזורי המימוש האלוהי"
+    },
+    {
+      "num": 21,
+      "id": "item21",
+      "connection": {
+        "startId": "item4",
+        "endId": "item7",
+        "description": "חסד לנצח, מגלם את הניצחון של האהבה"
+      },
+      "letter": { "number": 20, "hebrew": "כ", "name": "כף", "meaning": "כף יד" },
+      "tarot": {
+        "name": "החזקה",
+        "number": 11,
+        "symbolism": "מייצגת כוח רוחני"
+      },
+      "consciousness": "תודעה קולטת, פתיחות מוחלטת לחסד האלוהי המצריכה את הנשמה ומעוררת מעשה נכון",
+      "yetsiratic": { "correspondence": "צדק", "glyph": "♃", "meaning": "עוצמה" },
+      "cinerMeaning": "מייצג את קבלת החסד האלוהי"
+    },
+    {
+      "num": 22,
+      "id": "item22",
+      "connection": {
+        "startId": "item5",
+        "endId": "item6",
+        "description": "גבורה לתפארת, מסמל את איזון הכוחות"
+      },
+      "letter": { "number": 30, "hebrew": "ל", "name": "למד", "meaning": "מלקח" },
+      "tarot": {
+        "name": "התלוי",
+        "number": 12,
+        "symbolism": "מייצג הקרבה ושינוי"
+      },
+      "consciousness": "תודעה מקריבה, ויתור בטוח המשנה את הישות וחושף חכמה נסתרת",
+      "yetsiratic": { "correspondence": "מאזניים", "glyph": "♎", "meaning": "איזון" },
+      "cinerMeaning": "מגלם את ההקרבה הנדרשת להתפתחות רוחנית"
+    },
+    {
+      "num": 23,
+      "id": "item23",
+      "connection": {
+        "startId": "item5",
+        "endId": "item8",
+        "description": "גבורה להוד, מסמל את המים המטהרים"
+      },
+      "letter": { "number": 40, "hebrew": "מ", "name": "מים", "meaning": "מים" },
+      "tarot": {
+        "name": "המוות",
+        "number": 13,
+        "symbolism": "מייצג טרנספורמציה והתחדשות"
+      },
+      "consciousness": "תודעה מטהרת, זרם מתחדש המשנה ומחדש את הישות בעומק מהותה",
+      "yetsiratic": { "correspondence": "מים", "glyph": "▽", "meaning": "רגש" },
+      "cinerMeaning": "מגלם את הטהרה והשינוי"
+    },
+    {
+      "num": 24,
+      "id": "item24",
+      "connection": {
+        "startId": "item6",
+        "endId": "item7",
+        "description": "תפארת לנצח, מגלם את הרציפות"
+      },
+      "letter": { "number": 50, "hebrew": "נ", "name": "נון", "meaning": "דג" },
+      "tarot": {
+        "name": "המתינות",
+        "number": 14,
+        "symbolism": "מייצגת מידת ביניים והרמוניה"
+      },
+      "consciousness": "תודעה דמיונית, חזון פנימי המחבק את הנוזליות של החיים ומטפח הרמוניה אוניברסלית",
+      "yetsiratic": { "correspondence": "עקרב", "glyph": "♏", "meaning": "דמיון" },
+      "cinerMeaning": "מסמל נוזליות והסתגלות"
+    },
+    {
+      "num": 25,
+      "id": "item25",
+      "connection": {
+        "startId": "item6",
+        "endId": "item9",
+        "description": "תפארת ליסוד, מגלם תמיכה"
+      },
+      "letter": { "number": 60, "hebrew": "ס", "name": "סמך", "meaning": "תמיכה" },
+      "tarot": {
+        "name": "השטן",
+        "number": 15,
+        "symbolism": "מייצג פיתויים ומכשולים"
+      },
+      "consciousness": "תודעה נבחנת, מצב בהיר המתעלה על הפיתויים ותומך באמונה בעלייה רוחנית",
+      "yetsiratic": { "correspondence": "קשת", "glyph": "♐", "meaning": "אמונה" },
+      "cinerMeaning": "מדגיש אתגרים שיש להתגבר עליהם"
+    },
+    {
+      "num": 26,
+      "id": "item26",
+      "connection": {
+        "startId": "item6",
+        "endId": "item8",
+        "description": "תפארת להוד, מסמל את העין האלוהית"
+      },
+      "letter": { "number": 70, "hebrew": "ע", "name": "עין", "meaning": "עין" },
+      "tarot": {
+        "name": "המגדל",
+        "number": 16,
+        "symbolism": "מייצג קריסה והתגלות"
+      },
+      "consciousness": "תודעה מחודשת, הבהוב רוחני החושף אמיתות נסתרות ומעורר את ערות הנפש",
+      "yetsiratic": { "correspondence": "גדי", "glyph": "♑", "meaning": "טרנספורמציה" },
+      "cinerMeaning": "מגלם ערות פתאומית והבנה"
+    },
+    {
+      "num": 27,
+      "id": "item27",
+      "connection": {
+        "startId": "item7",
+        "endId": "item8",
+        "description": "נצח להוד, מגלם תקשורת"
+      },
+      "letter": { "number": 80, "hebrew": "פ", "name": "פה", "meaning": "פה" },
+      "tarot": {
+        "name": "הכוכבים",
+        "number": 17,
+        "symbolism": "מייצגים תקווה והשראה"
+      },
+      "consciousness": "תודעה מבטאת, אינטימיות עמוקה עם הדיבור הקדוש המאפשרת לתקשר את יופיו של היקום",
+      "yetsiratic": { "correspondence": "נוגה", "glyph": "♀", "meaning": "יופי" },
+      "cinerMeaning": "מסמל ביטוי ושיתוף"
+    },
+    {
+      "num": 28,
+      "id": "item28",
+      "connection": {
+        "startId": "item7",
+        "endId": "item9",
+        "description": "נצח ליסוד, מסמל נאמנות"
+      },
+      "letter": { "number": 90, "hebrew": "צ", "name": "צדי", "meaning": "קרס" },
+      "tarot": {
+        "name": "הירח",
+        "number": 18,
+        "symbolism": "מייצג את התת-מודע ואשליות"
+      },
+      "consciousness": "תודעה טבעית, קבלתיות אינטואיטיבית המאמצת את הלא נודע וסומכת על הדרכה דקה",
+      "yetsiratic": { "correspondence": "דלי", "glyph": "♒", "meaning": "ידע" },
+      "cinerMeaning": "מגלם אמון בלא נודע"
+    },
+    {
+      "num": 29,
+      "id": "item29",
+      "connection": {
+        "startId": "item7",
+        "endId": "item10",
+        "description": "נצח למלכות, מגלם את מחזור החיים"
+      },
+      "letter": { "number": 100, "hebrew": "ק", "name": "קוף", "meaning": "עורף" },
+      "tarot": {
+        "name": "השמש",
+        "number": 19,
+        "symbolism": "מייצג שמחה והצלחה"
+      },
+      "consciousness": "תודעה מגולמת, חיוניות עמוקה החוגגת את התגלמות האלוהי בחומר וממלאת את מעגל החיים",
+      "yetsiratic": { "correspondence": "דגים", "glyph": "♓", "meaning": "מימוש" },
+      "cinerMeaning": "מגלם את התגלמות האל על פני האדמה"
+    },
+    {
+      "num": 30,
+      "id": "item30",
+      "connection": {
+        "startId": "item8",
+        "endId": "item9",
+        "description": "הוד יסוד, מגלם ענווה"
+      },
+      "letter": { "number": 200, "hebrew": "ר", "name": "ריש", "meaning": "ראש" },
+      "tarot": {
+        "name": "המשפט",
+        "number": 20,
+        "symbolism": "מייצג התחדשות ושחרור"
+      },
+      "consciousness": "תודעת התחדשות, בהירות גלובלית המעוררת הבחנה פנימית ומובילה לשחרור הרוח",
+      "yetsiratic": { "correspondence": "כוכב חמה", "glyph": "☿", "meaning": "תקשורת" },
+      "cinerMeaning": "מגלם משפט פנימי ולידה מחדש"
+    },
+    {
+      "num": 31,
+      "id": "item31",
+      "connection": {
+        "startId": "item8",
+        "endId": "item10",
+        "description": "הוד למלכות, מגלם אש מטהרת"
+      },
+      "letter": { "number": 300, "hebrew": "ש", "name": "שין", "meaning": "שן" },
+      "tarot": {
+        "name": "השוטה",
+        "number": 0,
+        "symbolism": "מייצג פוטנציאל בלתי מוגבל ודרך"
+      },
+      "consciousness": "תודעה בלתי נכבית, להבה נצחית היוצרת שינוי עמוק והתחלה רוחנית חדשה",
+      "yetsiratic": { "correspondence": "אש", "glyph": "△", "meaning": "כוח" },
+      "cinerMeaning": "מסמל את תחילת המסע הרוחני החדש"
+    },
+    {
+      "num": 32,
+      "id": "item32",
+      "connection": {
+        "startId": "item9",
+        "endId": "item10",
+        "description": "יסוד למלכות, מגלם אמת"
+      },
+      "letter": { "number": 400, "hebrew": "ת", "name": "תיו", "meaning": "צלב" },
+      "tarot": {
+        "name": "העולם",
+        "number": 21,
+        "symbolism": "מייצג הישג ואחדות"
+      },
+      "consciousness": "תודעה מושלמת, שלמות אולטימטיבית החושפת את האמת היסודית של הקיום ואיחוד מושלם עם המקור",
+      "yetsiratic": { "correspondence": "ירח", "glyph": "☽", "meaning": "רגש" },
+      "cinerMeaning": "מגלם את המימוש הסופי ואיחוד עם האלוהות"
+    }
+  ]
+}

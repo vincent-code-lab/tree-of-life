@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1000" viewBox="0 0 600 1000">
+
+    <defs>
+        <!-- Dégradé doré -->
+        <radialGradient id="gold-gradient" cx="50%" cy="30%" r="60%">
+            <stop offset="0%" stop-color="#FFD700" />
+            <stop offset="50%" stop-color="#FFC107" />
+            <stop offset="100%" stop-color="#B8860B" />
+        </radialGradient>
+    </defs>
+
+    <!-- Fond doré -->
+    <rect x="20" y="20" width="560" height="960" rx="50" ry="50" fill="url(#gold-gradient)" stroke="white" stroke-width="5"/>
+    
+    <!-- Lettres Aleph animées -->
+    <text x="100" y="900" font-family="serif" font-size="150" fill="white" opacity="0.8">
+        א
+        <animate attributeName="y" from="1000" to="0" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" from="1" to="0" dur="4s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="300" y="950" font-family="serif" font-size="100" fill="white" opacity="0.8">
+        א
+        <animate attributeName="y" from="1000" to="0" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="500" y="800" font-family="serif" font-size="50" fill="white" opacity="0.8">
+        א
+        <animate attributeName="y" from="1000" to="0" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" from="1" to="0" dur="6s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Numéro de la carte en haut -->
+    <text x="300" y="80" font-family="serif" font-size="60" text-anchor="middle" fill="black">1</text>
+
+    <!-- Image WebP -->
+    <image href="1.webp" x="50" y="100" width="500" height="750" preserveAspectRatio="xMidYMid meet"/>
+
+    <!-- Titre en bas -->
+    <text x="300" y="950" font-family="serif" font-size="50" text-anchor="middle" fill="black">Le Bateleur</text>
+</svg>

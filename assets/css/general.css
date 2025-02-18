@@ -4,13 +4,14 @@
   Définition des variables CSS (Custom Properties)
 */
 :root {
+--debug-border-width: 0px; /* Par défaut, pas de bordure */
+
 
 /* Fonts */
---base-font: Open sans, sans-serif;
---title-font: Merriweather, serif;
+--base-font: 'Roboto', sans-serif;
+--title-font: 'Roboto', sans-serif;/*'Cormorant Garamond', serif;*/
 
-
-  /* Font-size */
+  /* Font-size 
   --fs-4: 0.25rem;
   --fs-5: 0.3125rem;
   --fs-6: 0.375rem;
@@ -25,6 +26,7 @@
   --fs-14: 0.875rem;
   --fs-16: 1rem;
   --fs-18: 1.125rem;
+  --fs-19: 1.1875rem;
   --fs-20: 1.25rem;
   --fs-24: 1.5rem;
   --fs-30: 1.875rem;
@@ -32,15 +34,75 @@
   --fs-42: 2.625rem;
   --fs-50: 3.125rem;
   --fs-72: 4.5rem;
-  --fs-90: 5.625rem;
+  --fs-90: 5.625rem;*/
 
-  --sephirah-size:  var(--fs-90); /*min(10vw, 90px);*/
-  --font-size: var(--fs-11-9); /*min(1.5vw, 11.9px);*/
-  --font-size-infini: var(--fs-13);/*min(1.9vw, 13px);*/
-  --label-font-size: var(--fs-13);/*min(2vw, 13px);*/
+  /**
+ * Gestion des tailles de police avec clamp() et calc().
+ *
+ * Pourquoi utiliser clamp() et calc() ?
+ * -------------------------------------
+ * 1. **Adaptabilité** : clamp() permet de définir une taille minimale, une taille idéale (calculée dynamiquement avec calc()) et une taille maximale.
+ * 2. **Réduction des media queries** : Plus besoin de définir des tailles spécifiques pour différents écrans, la taille s'ajuste automatiquement.
+ * 3. **Meilleure expérience utilisateur** : La police s'adapte aussi bien aux petits écrans qu'aux grands écrans, sans être trop petite ni trop grande.
+ * 4. **Compatibilité avec le zoom** : calc() permet d'intégrer une unité scalable comme rem en complément de vw, assurant une meilleure accessibilité.
+ *
+ * Structure des valeurs :
+ * ------------------------
+ * --fs-x: clamp( <taille_min>, calc(<facteur_vw> + <facteur_rem>), <taille_max> );
+ *
+ * - <taille_min>  : Empêche la police de devenir illisible sur les petits écrans.
+ * - <facteur_vw>  : Fait varier la taille en fonction de la largeur de l'écran.
+ * - <facteur_rem>  : Assure une échelle cohérente avec le reste du texte et le zoom utilisateur.
+ * - <taille_max>  : Évite que la police ne devienne trop grande sur les écrans larges.
+ *
+ * Exemple :
+ * --fs-16: clamp(0.875rem, calc(0.8vw + 0.8rem), 1rem);
+ *
+ * Cette approche assure une meilleure lisibilité et un design plus fluide sur tous les appareils.
+ */
+
+
+/* Font-size avec clamp() et calc() */
+--fs-4: clamp(0.2rem, calc(0.15vw + 0.15rem), 0.25rem);
+--fs-5: clamp(0.25rem, calc(0.18vw + 0.2rem), 0.3125rem);
+--fs-6: clamp(0.3rem, calc(0.2vw + 0.25rem), 0.375rem);
+--fs-7: clamp(0.35rem, calc(0.25vw + 0.3rem), 0.4375rem);
+--fs-8: clamp(0.4rem, calc(0.3vw + 0.35rem), 0.5rem);
+--fs-9: clamp(0.45rem, calc(0.35vw + 0.4rem), 0.5625rem);
+--fs-10: clamp(0.5rem, calc(0.4vw + 0.45rem), 0.625rem);
+--fs-11: clamp(0.55rem, calc(0.45vw + 0.5rem), 0.6875rem);
+--fs-11-9: clamp(0.6rem, calc(0.5vw + 0.55rem), 0.74375rem);
+--fs-12: clamp(0.625rem, calc(0.55vw + 0.6rem), 0.75rem);
+--fs-13: clamp(0.7rem, calc(0.6vw + 0.65rem), 0.8125rem);
+--fs-14: clamp(0.75rem, calc(0.7vw + 0.7rem), 0.875rem);
+--fs-16: clamp(0.875rem, calc(0.8vw + 0.8rem), 1rem);
+--fs-18: clamp(1rem, calc(0.9vw + 0.9rem), 1.125rem);
+--fs-19: clamp(1.0625rem, calc(1vw + 1rem), 1.1875rem);
+--fs-20: clamp(1.125rem, calc(1.1vw + 1.1rem), 1.25rem);
+--fs-24: clamp(1.375rem, calc(1.2vw + 1.3rem), 1.5rem);
+--fs-30: clamp(1.75rem, calc(1.5vw + 1.5rem), 1.875rem);
+--fs-36: clamp(2rem, calc(1.75vw + 1.8rem), 2.25rem);
+--fs-42: clamp(2.375rem, calc(2vw + 2.2rem), 2.625rem);
+--fs-50: clamp(2.75rem, calc(2.5vw + 2.5rem), 3.125rem);
+--fs-72: clamp(4rem, calc(3vw + 3.5rem), 4.5rem);
+--fs-90: clamp(5rem, calc(4vw + 4.5rem), 5.625rem);
+
+
+  --sephirah-size: clamp(3.5rem, calc(8vw + 2rem), 6.5rem);/*--sephirah-size: clamp(3.8dvh, calc(9.5vw + 9rem), 8.7dvh); /* var(--fs-90); /*min(10vw, 90px);*/
+  --font-size-sephirah: clamp(0.7rem, calc(0.6vw + 0.6rem), 0.9rem);
+  --label-font-size: clamp(0.8rem, calc(0.7vw + 0.7rem), 1rem);
+  /*--font-size-sephirah: 70%;/*clamp(0.125rem, calc(0.55vw + 0.6rem), 0.75rem); /*min(1.5vw, 11.9px);*/
+  --font-size-infini: var(--fs-12);/*min(1.9vw, 13px);*/
+  /*--label-font-size: var(--fs-13);/*min(2vw, 13px);*/
   --primary-color: #ffd700;
   --h1-color: #ffffff;
 
+  
+
+    /* Tailles spécifiques pour l'arbre 
+    --sephirah-size: clamp(3.5rem, calc(8vw + 2rem), 8rem);
+    --font-size-sephirah: clamp(0.7rem, calc(0.6vw + 0.6rem), 0.9rem);
+    --label-font-size: clamp(0.8rem, calc(0.7vw + 0.7rem), 1rem);*/
 }
 
 /* 
@@ -57,17 +119,24 @@
     Cela permet également de commencer avec une mise en page propre et d'ajouter des paddings spécifiques selon les besoins.
 */
 *, ::before, ::after {
-
   box-sizing: border-box; 
   margin:0;
-  padding: 0;
+  padding: 0;  
+
+  /*Bordure pour débogage */
+  box-shadow: 0 0 0 var(--debug-border-width) red inset;
+
+
 }
 
 
-html, body {
+html,
+body {
  /* background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 0, 0.1) 100%);*/
  /*background: radial-gradient(circle, rgba(249, 249, 249, 0) 50%, rgba(255, 255, 255, 0.164) 100%);*/
-  
+/* background: linear-gradient(to bottom, #000000, #0e0e0e); /* Dégradé du noi vers une teinte grise */ 
+min-height: 100dvh; /* Utilise la hauteur dynamique réelle  tient  compte de la barre d'adresse sur mobile*/
+min-width: 100dvw;
 }
 
 /*
@@ -79,26 +148,46 @@ body {
   /* Positionnement et mise en page */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
+  justify-content: center;  /* flex-start;  Aligne les éléments le long de l'axe principal (vertical avec column), en haut */
+  align-items: center; /* Centre les éléments sur l'axe transversal (horizontal avec column) */
+  height:  100vh;
   width: 100%;
+  min-height: 100vh;
  /* min-height: 100vh; /* Empêche le contenu de déborder */
  /* min-width: 100vw;  /* Empêche le contenu de déborder */
 
   /* Apparence visuelle (couleurs et bordures) */
-  background-color: #000000;
+  /* background-color: #000000; */
+  background: linear-gradient(to bottom, #101010, #000000);
+
+
+
   /*background: radial-gradient(circle at center, #101010, #000000);*/ /* Optionnel */
   color: white;
-  /*border: 1px solid #ff0000; /* Bordure pour débogage */
+  /*border: var(--debug-border-width) solid #ff0000;  Bordure pour débogage */
 
   /* Typographie */
-  font-family: 'Arial', Helvetica, sans-serif;
+  font-family: var(--title-font);
 
   /* Fonctionnalité */
   overflow: hidden; /* Empêche le défilement vertical */
+
+  opacity: 0; /* L'opacité initiale */
+  animation: fadeIn 0.75s ease-in-out forwards; /* L'animation */
   
- /* border: 5px solid #fcfcfc; /* Bordure pour débogage */
+  
+
+ /*  border: var(--debug-border-width)  solid #fcfcfc; Bordure pour débogage*/
+}
+
+/* Ajoutez une animation fade-in au body */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*
@@ -110,16 +199,16 @@ Conteneur principal pour le titre et l'arbre
   /* Positionnement et mise en page */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;  
   width: 100%;
   height: 100%;
 
   /* Fonctionnalité et interactions */
   transition: height 0.3s ease; /* Animation fluide pour les changements de hauteur */
-  overflow: visible; /* Permet aux éléments enfants de dépasser si nécessaire */
+  /*overflow: visible; /* Permet aux éléments enfants de dépasser si nécessaire */
   margin:0;
- /* border: 1px solid #ff0000; /* Bordure pour débogage */
+  /* border: var(--debug-border-width) solid #f2ff00; Bordure pour débogage */
 }
 
 /*
@@ -130,24 +219,42 @@ Titre principal
 h1 {
   color: var(--h1-color);
   /* Couleur de fond gris foncé */
-  background-color: #333;
-  font-size: var(--fs-20); /*0.15rem; /* 1.3 fois la taille que la police racine */
-
+  /* background-color: #333; */
+  font-size: var(--fs-15); /*0.15rem; /* 1.3 fois la taille que la police racine */
   text-align: center;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
-  font-family: 'Arial', sans-serif;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  font-family: var(--title-font);
+
+  word-wrap: break-word;
+  white-space: normal;
+ 
+  /* border-top: 0.2px solid rgba(255, 255, 255, 0.7);*/
   /*padding-bottom: 5px;*/
-  width: 100vw; /* Étend la largeur pour les petits écrans */  
+  width: auto; /* Étend la largeur pour les petits écrans */  
   
   /* Quelques ajustements de mise en page */
-  padding: 9px;
-  top :0;
-  margin: 0;
   cursor: pointer;
 
-  /*border: 1px solid #15ff11;  Bordure pour débogage */
+ /* Réduire légèrement le padding */
+ padding: 0.2%;
+ /*margin-bottom: 1rem; /* Ajouter une marge en bas du titre */
+  /* border: var(--debug-border-width) solid #15ff11; Bordure pour débogage */
+}
+
+/* Animation du texte uniquement */
+h1 span {
+  display: inline-block; /* Nécessaire pour la transformation */
+  word-wrap: break-word;
+  white-space: normal;
+  transform: scale(1);
+  will-change: transform, color;
+  /* Ajouter la transition pour la couleur */
+  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+h1:hover span {
+  transform: scale(1.1);
+  color: var(--primary-color); /* Utilise la variable CSS pour la couleur au survol */
 }
 
 /*
@@ -158,179 +265,51 @@ Conteneur principal du canvas et des séphiroth
 .container {
   position: relative;  /* Nécessaire pour positionner les éléments enfants */
   width: 100%; /* S'adapte à la largeur de l'écran */
-  max-width: 850px; /* Définir une largeur maximale */
-  height: calc(100vh - 5rem); /* Laisse de l'espace pour le titre */
+ /* aspect-ratio: 1 / 1.6; /* Maintient les proportions de l'arbre */
+  max-width: 840px; /*Définir une largeur maximale */
+  height: 100%;/*calc(100vh - 5rem); /* Laisse de l'espace pour le titre */
+  /* max-height: 90dvh; */
   /*max-height: 1000px; /* Empêche le débordement vertical */
-
-  
-  margin: auto 0; /* Centre le conteneur horizontalement */
   overflow: visible; /* Permet de voir les éléments dépassant du conteneur */
-  
-
-/*border: 1px solid #15ff11; /* Bordure pour débogage */
-
+  /* transform-origin: top left; Pour autoriser l'échelle, le scale */
+ /* border: var(--debug-border-width)  solid #0408ea;  Bordure pour débogage */
 }
 
-/*
-#pathCanvas  beau mais gourmant en ressource
------------
-Canevas pour tracer les chemins
-*/
-/*#pathCanvas {
- /* position: absolute; /* Nécessaire pour positionner les éléments enfants */
- /* top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Sous les Séphiroth */
-/*  filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
-  pointer-events: none; /* Permet de cliquer à travers le canevas */
- /* animation: glow 2s infinite alternate; /* Animation de la lueur */
- 
-/*}
-
-
-@keyframes glow {
-  0% {
-    filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
-  }
-  100% {
-    filter: drop-shadow(0 0 20px rgba(255, 223, 0, 1));
-  }
-}
-*/
-
-
-
-/* BIEN POUR LE GLOW  */
-
-/* Glow coloré, plus subtil */
-/*#pathCanvas {
+/* Hallo vert sur les chemins clignotant */
+#pathCanvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  pointer-events: none;
-
-  /* 
-    Animation de 90s : transitions très lentes et harmonieuses (ease-in-out)
-    pour que l’on reste longtemps dans chaque plage de couleur.
-  */
-/* animation: deepCosmicCycle 0 ease-in-out infinite;*/
-/*}
-
-@keyframes deepCosmicCycle {
-  /*
-    Étapes choisies (9 segments principaux + boucle) :
-      - 0%, 100% :  Vert émeraude
-      - 15%       :  Vert saphir
-      - 30%       :  Jaune électrique
-      - 45%       :  Or plus chaud
-      - 60%       :  Blanc éclatant
-      - 70%       :  Noir
-      - 80%       :  Rouge feu
-      - 90%       :  Rouge rubis
-    
-    Chaque segment de ~15% ou 10% du temps représente ~9 à 13.5 secondes 
-    où l'on profite de la teinte avant de glisser vers la suivante.
-    Les trois halos (40px, 100px, 200px) confèrent une aura très large.
-    Opacités élevées (0.95, 0.6, 0.3) pour un rayonnement bien visible.
-  */
-
-  /* 0% et 100% : Vert émeraude *//*
-  0%, 100% {
-    filter:
-      drop-shadow(0 0 40px rgba(0, 200, 100, 0.95))
-      drop-shadow(0 0 100px rgba(0, 200, 100, 0.60))
-      drop-shadow(0 0 200px rgba(0, 200, 100, 0.30));
-  }
-
-  /* 15% : Vert saphir (légèrement plus bleuté) *//*
-  15% {
-    filter:
-      drop-shadow(0 0 40px rgba(0, 130, 160, 0.95))
-      drop-shadow(0 0 100px rgba(0, 130, 160, 0.60))
-      drop-shadow(0 0 200px rgba(0, 130, 160, 0.30));
-  }
-
-  /* 30% : Jaune électrique *//*
-  30% {
-    filter:
-      drop-shadow(0 0 40px rgba(255, 220, 0, 0.95))
-      drop-shadow(0 0 100px rgba(255, 220, 0, 0.60))
-      drop-shadow(0 0 200px rgba(255, 220, 0, 0.30));
-  }
-
-  /* 45% : Or plus chaud (FFD700) *//*
-  45% {
-    filter:
-      drop-shadow(0 0 40px rgba(255, 215, 0, 0.95))
-      drop-shadow(0 0 100px rgba(255, 215, 0, 0.60))
-      drop-shadow(0 0 200px rgba(255, 215, 0, 0.30));
-  }
-
-  /* 60% : Blanc éclatant *//*
-  60% {
-    filter:
-      drop-shadow(0 0 40px rgba(255, 255, 255, 0.95))
-      drop-shadow(0 0 100px rgba(255, 255, 255, 0.70))
-      drop-shadow(0 0 200px rgba(255, 255, 255, 0.40));
-  }
-
-  /* 70% : Noir (effet d’ombre mystique) *//*
-  70% {
-    filter:
-      drop-shadow(0 0 40px rgba(0, 0, 0, 0.95))
-      drop-shadow(0 0 100px rgba(0, 0, 0, 0.60))
-      drop-shadow(0 0 200px rgba(0, 0, 0, 0.30));
-  }
-
-  /* 80% : Rouge feu *//*
-  80% {
-    filter:
-      drop-shadow(0 0 40px rgba(255, 60, 0, 0.95))
-      drop-shadow(0 0 100px rgba(255, 60, 0, 0.60))
-      drop-shadow(0 0 200px rgba(255, 60, 0, 0.30));
-  }
-
-  /* 90% : Rouge rubis plus sombre *//*
-  90% {
-    filter:
-      drop-shadow(0 0 40px rgba(180, 0, 40, 0.95))
-      drop-shadow(0 0 100px rgba(180, 0, 40, 0.60))
-      drop-shadow(0 0 200px rgba(180, 0, 40, 0.30));
-  }
-} */
-
-
-/*
-
-#pathCanvas {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
+  z-index: -1;
+  pointer-events: none;  
+  /* Utiliser un seul drop-shadow pour alléger le rendu */
+  filter: drop-shadow(0 0 10px rgba(140, 255, 0, 0.95));
   
-  /* Valeur par défaut (VERT ÉMERAUDE) : 
-     Ce "filter" restera toujours si on n'anime pas l'étape 0%. 
-     filter:
-     drop-shadow(0 0 10px rgba(140, 255, 0, 0.95))
-     drop-shadow(0 0 30px rgba(0, 172, 86, 0.6))
-     drop-shadow(0 0 60px rgba(0, 200, 100, 0.30));
+  /* Animation plus lente pour réduire la fréquence des changements 
+  animation: glow 0s infinite alternate;*/
+  
+  /* Indiquer au navigateur que le filtre va changer 
+  will-change: filter;*/
+}
+/*
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(140, 255, 0, 0.95));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(140, 255, 0, 1));
+  }
 }*/
 
-/*
-
+/* Pour les écrans plus petits, désactivez l'animation et l'effet pour améliorer les performances 
 @media (max-width: 800px) {
   #pathCanvas {
-    filter: none; /* ou un drop-shadow plus léger */ /*
+    filter: none;
+    animation: none;
   }
-}/*
-
+}*/
 
 
 
@@ -351,23 +330,24 @@ Canevas pour tracer les chemins
   border: 3px solid gold; /* Valeur par défaut si besoin */
   background: radial-gradient(circle, #ffffff, #fdd835);
   z-index: 2;
-  font-size: var(--font-size);
+  font-size: var(--font-size-sephirah); 
+  /* font-size: clamp(0.01rem, 70%, 0.8rem); 10% de la largeur de la div */
   padding: 5px;
   box-sizing: border-box;
   transform: translate(-50%, -50%) scale(1);
   box-shadow: 0 0 10px rgba(255, 223, 0, 0.9);
 
   /* Pour préparer le survol */
-  will-change: transform, background, box-shadow;
+  will-change: transform, background, box-shadow, opacity;
   /* Animation de survol */
-  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
   cursor: pointer;
   
   /* Animation d'apparition au chargement */
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
+  touch-action: none; /* Empêche le scroll ou pinch-zoom */ 
 }
-
 
 /* Animation d'apparition au chargement */
 @keyframes fadeIn {
@@ -382,18 +362,18 @@ Canevas pour tracer les chemins
 }
 
 /* Animation en cascade */
-.sephirah:nth-child(1) { animation-delay: 0s; }
-.sephirah:nth-child(2) { animation-delay: 0.1s; }
-.sephirah:nth-child(3) { animation-delay: 0.2s; }
-.sephirah:nth-child(4) { animation-delay: 0.3s; }
-.sephirah:nth-child(5) { animation-delay: 0.4s; }
-.sephirah:nth-child(6) { animation-delay: 0.5s; }
-.sephirah:nth-child(7) { animation-delay: 0.6s; }
-.sephirah:nth-child(8) { animation-delay: 0.7s; } 
-.sephirah:nth-child(9) { animation-delay: 0.8s; }
-.sephirah:nth-child(10) { animation-delay: 0.9s; }
-.sephirah:nth-child(11) { animation-delay: 1s; }
-.sephirah:nth-child(12) { animation-delay: 1.1s; }
+.sephirah:nth-child(1) { animation-delay: 0.1s; }
+.sephirah:nth-child(2) { animation-delay: 0.2s; }
+.sephirah:nth-child(3) { animation-delay: 0.3s; }
+.sephirah:nth-child(4) { animation-delay: 0.4s; }
+.sephirah:nth-child(5) { animation-delay: 0.5s; }
+.sephirah:nth-child(6) { animation-delay: 0.6s; }
+.sephirah:nth-child(7) { animation-delay: 0.7s; }
+.sephirah:nth-child(8) { animation-delay: 0.8s; } 
+.sephirah:nth-child(9) { animation-delay: 0.9s; }
+.sephirah:nth-child(10) { animation-delay: 1s; }
+.sephirah:nth-child(11) { animation-delay: 1.1s; }
+.sephirah:nth-child(12) { animation-delay: 1.2s; }
 
 /*
 .sephirah:hover
@@ -402,12 +382,12 @@ Effet au survol
 */
 .sephirah:hover {
   transform: translate(-50%, -50%) scale(1.4);
+  /* transition: transform 0.3s ease; */
   background: radial-gradient(circle, #fdd835, #ffaa00);
   box-shadow: 0 0 25px rgba(255, 223, 0, 1);
   color: white;
   background: radial-gradient(circle, #ffaa00, #fdd835);
-  box-shadow: 0 0 50px rgba(255, 223, 0, 1), 0 0 100px rgba(255, 223, 0, 0.8);
-  
+  box-shadow: 0 0 50px rgba(255, 223, 0, 1), 0 0 100px rgba(255, 223, 0, 0.8);  
 }
 /* particules en mouvement autour de chaque Séphirah, symbolisant l'énergie divine */
 .sephirah::after {
@@ -447,7 +427,8 @@ Effet au survol
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 3px 5px;
-  border-radius: 3px;
+  border-radius: 5px;
+  border: 0.1px solid rgba(254, 254, 254, 0.2);
   z-index: 3;
   user-select: text;
   pointer-events: auto; /* Autorise le survol pour le tooltip */
@@ -494,7 +475,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 }
 
 #item1 {
-  top: 9%;
+  top: 10%;
   left: 50%;
   /* Blanc pur */  
   box-shadow:
@@ -507,13 +488,11 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
     background: radial-gradient(circle, #ffffff, #e0e0e0); 
 }
 
-
-
 /**********************************
 * Hokhmah (#item2)
 **********************************/
 #item2 {
-  top: 16%;
+  top: 17%;
   left: 75%;
   background: radial-gradient(circle, #999999, #757575);
 }
@@ -522,7 +501,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 * Binah (#item3)
 **********************************/
 #item3 {
-  top: 16%;
+  top: 17%;
   left: 25%;
   color:white;
   background: radial-gradient(circle, #333333, #000000);
@@ -559,7 +538,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 * Netsah (#item7)
 **********************************/
 #item7 {
-  top: 69%;
+  top: 65.5%;
   left: 75%;
   background: radial-gradient(circle, #00ff00, #b8f1b0); 
 }
@@ -568,7 +547,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 * Hod (#item8)
 **********************************/
 #item8 {
-  top: 69%;
+  top: 65.5%;
   left: 25%;
   background: radial-gradient(circle, #ff9900, #ffc48c);
 }
@@ -577,7 +556,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 * Yésod (#item9)
 **********************************/
 #item9 {
-  top: 77.5%;
+  top: 75%;
   left: 50%;
   background: radial-gradient(circle, #9900ff, #ce93d8);
 }
@@ -586,7 +565,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 * Malkhout (#item10)
 **********************************/
 #item10 {
-  top: 91%;
+  top: 89%;
   left: 50%;
   background: radial-gradient(circle, #663300, #8d6e63);
 }
@@ -603,6 +582,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
   color: white;
   box-shadow: none;
   filter: none; /* Désactive les effets de rayonnement */
+ 
 }
 
 #daath {
@@ -625,43 +605,6 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
     box-shadow: 0 0 50px rgba(255, 223, 0, 1);
   }
 }
-
-/*
-.sephirah:active {
-  animation: ripple 1s ease-out;
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0px rgba(255, 223, 0, 0.9);
-  }
-  100% {
-    box-shadow: 0 0 50px rgba(255, 223, 0, 0);
-  }
-}*/
-
-/* Animation de lueur comme un batement de coeur */
-/*.sephirah::before {
-  content: '';
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 223, 0, 0.5), transparent);
-  z-index: -1;
-  animation: glow 3s infinite;
-}
-
-@keyframes glow {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-}  */
 
 
 /*Cercle quand je reste appuyé sur une sephirat*/
@@ -687,305 +630,6 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 }
 
 
-/* Animation de lueur pour les colonnes 
-.column {
-  animation: columnGlow 5s infinite alternate;
-}
-
-@keyframes columnGlow {
-  0% {
-    color: rgba(255, 223, 0, 0.8);
-  }
-  100% {
-    color: rgba(255, 223, 0, 1);
-    text-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
-  }
-}*/
-
-/* Animation de fond lumière
- body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent);
-  animation: moveBackground 10s linear infinite;
-  z-index: -1;
-} 
-
-@keyframes moveBackground {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-10%);
-  }
-} */
-
-/* Fin Animation de fond lumière */
-
-
-/* Animation améliorée de fond : Flux énergétique avec particules lumineuses
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.9), #101010);
-  z-index: -1;
-  animation: cosmicFlow 30s linear infinite;
-  mask-image: radial-gradient(circle, transparent, black 80%);
-  -webkit-mask-image: radial-gradient(circle, transparent, black 80%);
-}
-
-@keyframes cosmicFlow {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 200% 200%;
-  }
-}*/
-
-/* Ajoutez une couche supplémentaire de particules lumineuses 
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(255, 223, 0, 0.2), transparent 50%),
-                    radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 50%);
-  background-size: 5px 5px, 10px 10px;
-  z-index: -2;
-  animation: particleFlow 20s linear infinite;
-  opacity: 0.6;
-}
-
-@keyframes particleFlow {
-  0% {
-    background-position: 0 0, 0 0;
-  }
-  100% {
-    background-position: 100px 100px, -100px -100px;
-  }
-}
-*/
-
-/* 
-
-body::before {
-  content: '';
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 223, 0, 0.1), transparent 70%);
-  transform: translate(-50%, -50%);
-  animation: pulseWaves 8s infinite ease-in-out;
-  z-index: -1;
-  opacity: 0.6;
-}
-
-@keyframes pulseWaves {
-  0% {
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0.3;
-  }
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), transparent);
-  animation: cosmicGlow 12s infinite alternate ease-in-out;
-  z-index: -2;
-}
-
-@keyframes cosmicGlow {
-  0% {
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), transparent 80%);
-  }
-  100% {
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.9), transparent 60%);
-  }
-}
- */
-
-
-
-
-
-
-
-/* body::after {
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.8), transparent),
-              radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 50%);
-  background-size: 5px 5px, 10px 10px;
-  animation: starTwinkle 15s infinite linear;
-}
-
-@keyframes starTwinkle {
-  0%, 100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-} */
-
-/*  un effet de galaxie tourbillonnante dans le fond j'aime bien
-body::before {
-  content: '';
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 250%;
-  height: 250%;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent),
-              radial-gradient(circle at 60% 40%, rgba(255, 223, 0, 0.2), transparent 50%);
-  transform: translate(-50%, -50%) rotate(0deg);
-  animation: swirlGalaxy 60s infinite linear;
-  z-index: -1;
-}
-
-@keyframes swirlGalaxy {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-*/
-
-/* Animation de grille pulsante
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-      0deg,
-      rgba(255, 223, 0, 0.1) 0,
-      rgba(255, 223, 0, 0.1) 2px,
-      transparent 2px,
-      transparent 20px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 223, 0, 0.1) 0,
-      rgba(255, 223, 0, 0.1) 2px,
-      transparent 2px,
-      transparent 20px
-    );
-  animation: pulseGrid 8s infinite ease-in-out;
-  z-index: -1;
-}
- */
-
-
-
-
-/* Animation de vortex tourbillonnant  j'aime
-body::before {
-  content: '';
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: conic-gradient(
-    rgba(255, 223, 0, 0.1),
-    rgba(255, 255, 255, 0.05),
-    transparent,
-    rgba(255, 223, 0, 0.1)
-  );
-  transform: translate(-50%, -50%);
-  animation: vortexSpin 15s linear infinite;
-  z-index: -1;
-}
-
-@keyframes vortexSpin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}*/
-
-/* Animation de tourbillon de lumière comme une restiration  Moyen
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent),
-              radial-gradient(circle at 30% 70%, rgba(255, 223, 0, 0.1), transparent);
-  animation: starsTwinkle 5s infinite ease-in-out;
-  z-index: -1;
-}
-
-@keyframes starsTwinkle {
-  0%, 100% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-*/
-
-/* Animation de lumière divine en arrière-plan 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 223, 0, 0.1), transparent 70%);
-  animation: lightParticles 20s infinite alternate;
-  z-index: -1;
-}
-
-@keyframes lightParticles {
-  0% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
-*/
-
-
-
-
-
 
 /* Code pour bouton plein écran */
 
@@ -1003,8 +647,7 @@ body::before {
   align-items: center;
   cursor: pointer;
   transition: background 0.3s, opacity 0.5s; 
-  opacity: 1;
- 
+  opacity: 1; 
 }
 
 .fullscreen-button.hidden {
@@ -1032,26 +675,27 @@ body::before {
 
 
 
-
-
 /* Style pour le symbole de l'infini */
 .infinity-symbol {
-  font-size: var(--font-size-infini); /* Ajustez la taille selon vos besoins */
-  font-family:  Arial, Helvetica, sans-serif;
-  color: var(--primary-color); 
+  position: absolute; /* Nécessaire si on veut le centrer via left/top */
+  /* Taille, couleur, etc. */
+  font-size: var(--font-size-infini);
+  color: var(--primary-color);
   cursor: pointer;
   user-select: text;
   pointer-events: auto;
-  transition: transform 0.3s ease, color 0.3s ease;
-
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  /* Ajoute l'effet de translation pour le centrage + scale initial */
+  transform: translate(-50%, -50%) scale(1);
+  /* Ajoute la transition pour que l'effet soit fluide */
+  transition: transform 0.9s ease, color 0.3s ease;
 }
-
 
 .infinity-symbol:hover {
-  transform: scale(1.2);
-  color: white; 
+  /* On conserve translate(-50%, -50%) et on modifie seulement scale */
+  transform: translate(-50%, -50%) scale(1.5);
+  color: white;
 }
-
 
 
 /* Style pour chaque colonne */
@@ -1060,37 +704,18 @@ body::before {
   font-size: var(--font-size-infini);
   cursor: pointer;
   user-select: text;
-  pointer-events: auto;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  pointer-events: auto; 
+  /* Ajoute l'effet de translation pour le centrage + scale initial */
+  transform: translate(-50%, -50%) scale(1);
+   /* Ajoute la transition sur la transformation et la couleur */
+  transition: transform 0.9s ease, color 0.3s ease;
 }
 
 .column:hover {
-  transform: scale(1.2);
+  transform: translate(-50%, -50%) scale(1.5);
   color: white;
 }
-
-
-
-/* Style pour le fond lumineux */
-/*
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #000000, #101010, #000033);
-    animation: infiniteGlow 20s linear infinite;
-    mask-image: radial-gradient(circle, transparent, black 90%);
-    z-index: -1;
-}
-
-@keyframes infiniteGlow {
-    0% { background-position: 0 0; }
-    100% { background-position: 200px 200px; }
-} */
-
-
 
 
 #ketherParticlesCanvas {
@@ -1105,7 +730,7 @@ body::before {
 
 
 
-#flameCanvas {
+#tipherethSunCanvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -1113,6 +738,8 @@ body::before {
   height: 100%;
   z-index: 0; /* Derrière les autres éléments */
   pointer-events: none; /* Permet d’interagir avec les éléments au-dessus */
+ 
+  
 }
 
 
@@ -1123,19 +750,9 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: 0; /* Derrière les autres éléments */
-  pointer-events: none; /* Permet d’interagir avec les éléments au-dessus */
-}
+ pointer-events: none; /* Permet d’interagir avec les éléments au-dessus */
+} 
 
-
-#malkuthFlameCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Derrière les autres éléments */
-  pointer-events: none; /* Permet d’interagir avec les éléments au-dessus */
-}
 
 
 
@@ -1162,10 +779,6 @@ body::before {
 }
 
 
-
-
-
-
 #crystalsCanvas {
   position: absolute;
   top: 0;
@@ -1177,8 +790,6 @@ body::before {
 }
 
 
-
-
 .sound-control-button {
   position: fixed;
   bottom: 10px;
@@ -1187,11 +798,11 @@ body::before {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(0, 0, 0, 0.8);
+  /*background: rgba(0, 0, 0, 0.1);*/
   color: white;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -1201,12 +812,13 @@ body::before {
 }
 
 .sound-control-button:hover {
-  background: rgba(0, 0, 0, 1); /* Accentuer le fond au survol */
+  /*background: rgba(0, 0, 0, 1); /* Accentuer le fond au survol */
 }
 
 .sound-control-button i {
   font-size: var(--fs-24);
   cursor: pointer;
+  width: 30px; /* Largeur fixe */
 }
 
 #volumeSlider {
@@ -1223,31 +835,310 @@ body::before {
 
 
 /* Style pour le curseur de volume */
-/*#volumeSlider {
-  appearance: none; /* Supprime le style par défaut */
- /* background: linear-gradient(to right, #00ff00, #b8f1b0); /* Utilise les couleurs de Netsah */
- /* height: 8px;
+
+/* Barre de volume */
+#volumeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(to right, white 0%, white var(--volume-level, 50%), rgba(66, 64, 64, 0.6) var(--volume-level, 50%), rgba(66, 64, 64, 0.6) 100%);
   border-radius: 5px;
   outline: none;
-  cursor: pointer;
+  transition: background 0.2s;
 }
 
-/* #volumeSlider::-webkit-slider-thumb {
+/* Curseur du slider */
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
   appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #00ff00; /* Bouton du curseur en vert vif */
-  /* border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white; /* Curseur blanc */
   cursor: pointer;
 }
 
 #volumeSlider::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: #00ff00; /* Bouton du curseur en vert vif */
- /* border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white; /* Curseur blanc */
   cursor: pointer;
-} */ 
+}
+
+#volumeSlider {
+  width: 85px; /* Ajustez cette valeur selon vos besoins */
+  max-width: 100%; /* Empêche le dépassement dans des conteneurs plus petits */
+}
+
+/* Conteneur principal de l'infobulle */
+.tooltip {
+    max-width: 350px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 8px; /* Réduction des marges internes */
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Conteneur pour la lettre et la signification */
+.tooltip-header {
+    display: flex; /* Disposition en ligne */
+    align-items: baseline; /* Aligne les bases (bas) des éléments */
+    margin-bottom: 6px; /* Réduction de l'espacement */
+}
+
+/* Lettre hébraïque */
+.tooltip-hebrew-letter {
+    font-size: 5rem; /* Taille légèrement réduite pour économiser l’espace */
+    color: #ffd700; /* Couleur dorée */
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 223, 0, 0.7);
+    margin-right: 8px; /* Espacement réduit avec la signification */
+    line-height: 0.4; /* Assure que la lettre occupe un minimum d’espace vertical */
+}
+
+/* Signification */
+.tooltip-meaning {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2; /* Réduction de l’espacement vertical */
+}
+
+/* Sections complémentaires */
+.tooltip-section {
+    margin-bottom: 6px; /* Espacement compact entre sections */
+}
+
+/* Séparateurs */
+.tooltip-separator {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 6px 0; /* Réduction des marges autour des séparateurs */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .tooltip {
+        max-width: 90%; /* Ajuste pour petits écrans */
+        font-size: 12px; /* Réduction de la taille du texte */
+    }
+    .tooltip-hebrew-letter {
+        font-size: 2.3rem; /* Taille ajustée pour mobile */
+    }
+}
+
+/* style pour les images */
+#imgTarotPath {
+  /* border-radius: 4%; */
+  width: 90%;/*177px;*/
+  max-width: 185px;
+  height: 90%;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+
+
+  /* margin-left: auto;
+  margin-right: auto;
+  display: block; Assurez-vous que l'élément est un bloc */
+}
+
+#grille {
+  display: grid;  
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1px; 
+}
+
+#imgTarotSephirah {
+  border-radius: 5%;
+  width: 150px;
+  margin: 0.2rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0.2rem; 
+
+}
+
+/* Style pour indiquer le focus */
+.sephirah:focus,
+.label:focus,
+.column:focus,
+#infinity-symbol:focus,
+h1 span:focus {
+ /* outline: 4px solid  rgba(56, 255, 1, 0.676); /*rgba(56, 255, 1, 0.676); /*rgba(255, 0, 0, 0.388);*/
+  outline-offset: 2px;
+  /* Optionnel : ajouter un effet de brillance */
+  box-shadow: 0 0 15px rgba(0, 255, 30, 0.5);
+}
+
+/*.visited::after {
+  content: ''; 
+  outline: 5px solid  rgba(255, 0, 0, 0.836);
+  outline-offset: 2px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(22, 243, 10, 0.363); /* Rouge foncé semi-transparent */
+ /* border-radius: inherit; /* Hérite du border-radius du parent */
+ /* pointer-events: none; /* Permet de cliquer à travers */
+ /* z-index: 1; /* Au-dessus de l'élément mais en-dessous des autres éléments */
+/*}*/
+
+
+.sephirah.visited::after,
+ h1 span.visited::after,
+.label.visited::after,
+.column.visited::after,
+#infinity-symbol.visited::after {
+  content: '';
+  position: absolute;   /* important ! */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*outline: 10px solid rgba(211, 211, 211, 0.5);  Gris clair */
+  /*outline: 5px solid rgba(135, 206, 250, 0.5); /* Bleu ciel */
+
+  outline: 3px solid  rgba(56, 255, 1, 0.676); 
+  box-shadow: 0 0 15px rgba(0, 255, 30, 0.5);
+  /* background-color: rgba(22, 243, 10, 0.363); Rouge foncé semi-transparent */
+  /*outline: 5px solid rgba(178, 34, 34, 0.5);  Rouge brique */
+  outline-offset: 1px;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
+
+/* Animation de l'outline */
+/*animation: outlineAppear 5s forwards;  Applique l'animation */
+
+}
+
+@keyframes outlineAppear {
+  0% {
+    outline: 3px solid rgba(56, 255, 1, 0); /* Invisible au début */
+  }
+  100% {
+    outline: 3px solid rgba(56, 255, 1, 0.676); /* Visible à la fin */
+  }
+}
+
+.sephirah.visited::after,
+.label.visited::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* box-shadow: 0px 30px 100px rgba(255, 215, 0, 1); Brillance dorée*/
+  
+  box-shadow: 
+  0px 30px 150px rgb(0, 255, 21) , /* Brillance dorée jaune rgba(255, 215, 0, 1)    vert rgb(0, 255, 21),*/
+  0px -30px 150px rgba(255, 215, 0, 0.5), /* Effet miroir */
+  0px 0px 80px rgba(255, 215, 0, 0.7); /* Ombre centrale pour un effet de profondeur */
+  /*box-shadow: 
+    0px 30px 100px rgba(255, 215, 0, 1),  Brillance dorée */
+   /* 0px -30px 100px rgba(255, 215, 0, 0.5);  Effet miroir */
+  outline: none;  /* Supprime le contour */  
+  border-radius: inherit;
+  z-index: 1;
+}
+
+
+.label.visited::after {
+  /* outline: none; Supprime le contour */
+  outline: 1px solid  rgba(56, 255, 1, 0.676); 
+  box-shadow: 0 0 15px rgba(0, 255, 30, 0.5);
+}
+/*
+.label.visited::before {
+  content: '✔'; /* Icône de confirmation */
+/*  position: absolute;
+  left: -14px; /* Ajustez la position selon vos besoins */
+/*
+  color: rgba(255, 215, 0, 0.8); /* Couleur dorée */
+/*}*/
+
+
+
+
+ /* video { */
+     /*position: fixed; /* La vidéo reste en place même si on défile */
+    /*  top: 0; 
+       left: 0;
+       width: 100%; /*La vidéo couvre toute la largeur */
+     /*  height: 100%; /* La vidéo couvre toute la hauteur */
+     /*   object-fit: cover; /* Ajuste la vidéo pour qu'elle remplisse le conteneur sans déformation */
+     /*  z-index: -1; /* Place la vidéo en arrière-plan   */
+      /*}*/ 
+
+    .video-body {
+     border-radius: 40%;
+     width: 100%;
+     position: absolute;
+
+     top: 0; 
+     left: 0;
+     
+     position: fixed; 
+     z-index: -10; 
+
+     width: 100%;
+     object-fit: contain; /* Ajuste la vidéo pour qu'elle remplisse le conteneur sans déformation */
+     border-radius: 3%;     
+       
+     }
+ 
+
+
+
+    .video-papesse {
+      width: 100%;
+      object-fit: contain; /* Ajuste la vidéo pour qu'elle remplisse le conteneur sans déformation */
+      border-radius: 3%;      
+    }
+
+    .tooltip-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 40%;
+      opacity: 1;
+
+      /*box-shadow: 0px 30px 100px rgba(255, 215, 0, 0.2); Brillance dorée*/
+      
+    }
+
+    .tooltip-image2 {
+      width: 100%;
+      max-width: 78%;
+      border-radius: 50%;
+      opacity: 1;
+      outline: 2px solid rgba(255, 215, 0, 0.2);
+      display: block; /* Assurez-vous que l'image est un bloc */
+      margin: 0 auto; /* Centre l'image horizontalement */
+    }
+
+
+
+
+
+
+
+    .meditation-active {
+      background-color: rgba(0, 128, 255, 0.2);
+      border: 2px solid blue;
+    }
+
+
+    .active-sound {
+      background-color: rgba(244, 12, 209, 0.2);
+      border: 15px solid rgb(255, 17, 0);
+    }
 
 
 
@@ -1257,3 +1148,187 @@ body::before {
 
 
 
+
+  .loader {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-left-color: #ffd700;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      animation: spin 1s linear infinite;
+      position: absolute;
+      
+      left: 95%;
+      transform: translate(-50%, -50%);
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+
+.site-header {
+  display: flex; 
+  width: 100%;
+  align-items: center; /* Centre verticalement les éléments enfants */
+  justify-content: center; /* Optionnel : espace entre les éléments si nécessaire */
+  position: relative; 
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.7);
+  background-color: #333;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.language-menu {
+    position: absolute;
+    top: 0px; /* 10px */
+    top: 50%; /* Centre verticalement */
+    transform: translateY(-50%); /* Ajuste la position pour centrer parfaitement */
+    right: 0px; /* 10px */ 
+    background: #222;
+    color: white;
+    padding: 4.5px; /* 10px */
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-14);   
+}
+
+
+ 
+@media print {
+    .language-menu {
+        display: none !important;
+    }
+}
+
+.language-menu span {
+    margin-right: 5px;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: #222;
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 150px;
+}
+.dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+.dropdown li:hover {
+    background: #444;
+}
+.arrow {
+    transition: transform 0.3s;
+}
+.open .arrow {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 750px) {
+    .language-menu {
+        top: 5px;
+        right: 5px;
+        padding: 2px;
+        font-size: var(--fs-11);
+    }
+    .dropdown {
+        width: 120px;
+    }
+}
+
+
+
+
+
+
+.infinity-symbol::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Taille légèrement supérieure pour envelopper le symbole */
+  width: 220%;
+  height: 220%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 200, 0.8) 0%, rgba(255, 223, 0, 0) 80%);
+  filter: blur(25px);
+  z-index: -3;
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+/* Bouton de réinitialisation */
+.reset-button {
+  position: fixed;
+  bottom: 20px;
+  right: 140px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.reset-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.reset-button i {
+  color: white;
+  font-size: 1.2em;
+}
+
+/* canvas {
+   border: 1px solid rgb(141, 15, 15);
+} */
+
+/* Styles pour le bouton de rechargement */
+.reload-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reload-button:hover {
+  background: rgba(0,0,0,0.7);
+}

@@ -1,0 +1,11 @@
+D:\Programmation\WEB\tree-of-life\assets\video\papesse.mp4
+
+
+ffmpeg -i D:\Programmation\WEB\tree-of-life\assets\video\papesse.mp4 -c:v libvpx-vp9 -b:v 1M -c:a libopus D:\Programmation\WEB\tree-of-life\assets\video\papesse.webm
+
+
+
+ffmpeg -i D:\Programmation\WEB\tree-of-life\assets\video\papesse.mp4 -c:v libvpx-vp9 -crf 30 -b:v 0 -c:a libopus D:\Programmation\WEB\tree-of-life\assets\video\papesse.webm
+
+
+ffmpeg -i D:\Programmation\WEB\tree-of-life\assets\video\papesse.mp4 -c:v libvpx-vp9 -crf 40 -b:v 0 -c:a libopus -b:a 64k D:\Programmation\WEB\tree-of-life\assets\video\papesse3.webm

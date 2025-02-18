@@ -1,0 +1,270 @@
+/* BIEN POUR LE GLOW  */
+
+/* Glow coloré, plus subtil */
+#pathCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+
+  /* 
+    Animation de 90s : transitions très lentes et harmonieuses (ease-in-out)
+    pour que l’on reste longtemps dans chaque plage de couleur.
+  */
+ animation: deepCosmicCycle 30s ease-in-out infinite;
+}
+
+@keyframes deepCosmicCycle {
+  /*
+    Étapes choisies (9 segments principaux + boucle) :
+      - 0%, 100% :  Vert émeraude
+      - 15%       :  Vert saphir
+      - 30%       :  Jaune électrique
+      - 45%       :  Or plus chaud
+      - 60%       :  Blanc éclatant
+      - 70%       :  Noir
+      - 80%       :  Rouge feu
+      - 90%       :  Rouge rubis
+    
+    Chaque segment de ~15% ou 10% du temps représente ~9 à 13.5 secondes 
+    où l'on profite de la teinte avant de glisser vers la suivante.
+    Les trois halos (40px, 100px, 200px) confèrent une aura très large.
+    Opacités élevées (0.95, 0.6, 0.3) pour un rayonnement bien visible.
+  */
+
+  /* 0% et 100% : Vert émeraude */
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 40px rgba(0, 200, 100, 0.95))
+      drop-shadow(0 0 100px rgba(0, 200, 100, 0.60))
+      drop-shadow(0 0 200px rgba(0, 200, 100, 0.30));
+  }
+
+  /* 15% : Vert saphir (légèrement plus bleuté) */
+  15% {
+    filter:
+      drop-shadow(0 0 40px rgba(0, 130, 160, 0.95))
+      drop-shadow(0 0 100px rgba(0, 130, 160, 0.60))
+      drop-shadow(0 0 200px rgba(0, 130, 160, 0.30));
+  }
+
+  /* 30% : Jaune électrique */
+  30% {
+    filter:
+      drop-shadow(0 0 40px rgba(255, 220, 0, 0.95))
+      drop-shadow(0 0 100px rgba(255, 220, 0, 0.60))
+      drop-shadow(0 0 200px rgba(255, 220, 0, 0.30));
+  }
+
+  /* 45% : Or plus chaud (FFD700) */
+  45% {
+    filter:
+      drop-shadow(0 0 40px rgba(255, 215, 0, 0.95))
+      drop-shadow(0 0 100px rgba(255, 215, 0, 0.60))
+      drop-shadow(0 0 200px rgba(255, 215, 0, 0.30));
+  }
+
+  /* 60% : Blanc éclatant */
+  60% {
+    filter:
+      drop-shadow(0 0 40px rgba(255, 255, 255, 0.95))
+      drop-shadow(0 0 100px rgba(255, 255, 255, 0.70))
+      drop-shadow(0 0 200px rgba(255, 255, 255, 0.40));
+  }
+
+  /* 70% : Noir (effet d’ombre mystique) */
+  70% {
+    filter:
+      drop-shadow(0 0 40px rgba(0, 0, 0, 0.95))
+      drop-shadow(0 0 100px rgba(0, 0, 0, 0.60))
+      drop-shadow(0 0 200px rgba(0, 0, 0, 0.30));
+  }
+
+  /* 80% : Rouge feu */
+  80% {
+    filter:
+      drop-shadow(0 0 40px rgba(255, 60, 0, 0.95))
+      drop-shadow(0 0 100px rgba(255, 60, 0, 0.60))
+      drop-shadow(0 0 200px rgba(255, 60, 0, 0.30));
+  }
+
+  /* 90% : Rouge rubis plus sombre */
+  90% {
+    filter:
+      drop-shadow(0 0 40px rgba(180, 0, 40, 0.95))
+      drop-shadow(0 0 100px rgba(180, 0, 40, 0.60))
+      drop-shadow(0 0 200px rgba(180, 0, 40, 0.30));
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#pathCanvas  beau mais gourmant en ressource
+-----------
+Canevas pour tracer les chemins
+
+#pathCanvas {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
+  pointer-events: none; 
+  animation: glow 2s infinite alternate; 
+ 
+}
+
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 223, 0, 1));
+  }
+}
+*/
+
+
+
+
+
+#pathCanvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  
+  /* Valeur par défaut (VERT ÉMERAUDE) : 
+     Ce "filter" restera toujours si on n'anime pas l'étape 0%. */
+     filter:
+     drop-shadow(0 0 10px rgba(140, 255, 0, 0.95))
+     drop-shadow(0 0 30px rgba(0, 172, 86, 0.6))
+     drop-shadow(0 0 60px rgba(0, 200, 100, 0.30));
+}
+
+
+
+@media (max-width: 800px) {
+  #pathCanvas {
+    filter: none; /* ou un drop-shadow plus léger */ 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+AVANT version optimisée
+
+
+#pathCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  
+  /* Appliquer la série d'ombres par défaut (VERT ÉMERAUDE) */
+  filter:
+    drop-shadow(0 0 10px rgba(140, 255, 0, 0.95))
+    drop-shadow(0 0 30px rgba(0, 172, 86, 0.6))
+    drop-shadow(0 0 60px rgba(0, 200, 100, 0.30));
+  
+  /* Lancer l'animation de lueur */
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    /* Valeurs initiales identiques aux ombres par défaut */
+    filter:
+      drop-shadow(0 0 10px rgba(140, 255, 0, 0.95))
+      drop-shadow(0 0 30px rgba(0, 172, 86, 0.6))
+      drop-shadow(0 0 60px rgba(0, 200, 100, 0.30));
+  }
+  100% {
+    /* Valeurs finales pour renforcer la lueur */
+    filter:
+      drop-shadow(0 0 20px rgba(140, 255, 0, 1))
+      drop-shadow(0 0 50px rgba(0, 172, 86, 0.8))
+      drop-shadow(0 0 90px rgba(0, 200, 100, 0.5));
+  }
+}
+
+@media (max-width: 800px) {
+  #pathCanvas {
+    filter: none; /* Désactiver ou ajuster le drop-shadow sur petits écrans */
+    animation: none; /* Éventuellement désactiver l'animation si nécessaire */
+  }
+}
+
+
+
+VERSION OPTIMISÉE mai peut-être moins jolie
+
+#pathCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  
+  /* Utiliser un seul drop-shadow pour alléger le rendu */
+  filter: drop-shadow(0 0 10px rgba(140, 255, 0, 0.95));
+  
+  /* Animation plus lente pour réduire la fréquence des changements */
+  animation: glow 4s infinite alternate;
+  
+  /* Indiquer au navigateur que le filtre va changer */
+  will-change: filter;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(140, 255, 0, 0.95));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(140, 255, 0, 1));
+  }
+}
+
+/* Pour les écrans plus petits, désactivez l'animation et l'effet pour améliorer les performances */
+@media (max-width: 800px) {
+  #pathCanvas {
+    filter: none;
+    animation: none;
+  }
+}

@@ -1,0 +1,622 @@
+{ "metadata": {
+    "author": "Vincent",
+    "version": "1.0",
+    "description": "Représentation des 32 chemins de l'Arbre de Vie kabbalistique",
+    "date": "2025-01-04",
+    "language": "fr", 
+    "lastUpdate": "2025-01-18"  
+  },
+  
+  "pageTitle": {
+  "pageTitleTxt": "L'Arbre de Vie (עץ החיים) : 32 voies de la Sagesse",
+  "tooltipTitleTxt": "10 Sephiroth (sphères divines) et 22 Cineroth (sentiers de l'Arbre de Vie), symbolisant les aspects et les connexions de l'univers selon la mystique juive (Kabbale)"
+  },
+
+  "infinitySymbol": {
+  "infinitySymbolTxt": "Aïn Soph",
+  "tooltipinfiniSymbolTxt": "<strong>∞</strong> (אין סוף), Source ultime de l'existence.<br>L'Infini divin, au-delà des limites et de toute compréhension"
+  },
+
+  "pillars": {
+    "pillarLeftTxt": "Sévérité",
+    "pillarCenterTxt": "Équilibre",
+    "pillarRightTxt": "Miséricorde",
+    "tooltipPillarLeftTxt": "Geburah (גבורה) : pilier de la rigueur qui structure et limite (justice, force, discipline et restriction divine)",
+    "tooltipPillarCenterTxt": "Emtsa (אמצע) : pilier de l'harmonie qui harmonise et équilibre (équilibre parfait, médiation, conscience et volonté divine)",
+    "tooltipPillarRightTxt": "Hesed (רחמים) : pilier de la miséricorde, l'amour qui donne et expanse (compassion, amour, clémence et expansion divine)",
+    "pillarLeftDescription": "Geburah - Le pilier de la force qui structure et limite",
+    "pillarCenterDescription": "Emtsa - Le pilier central qui harmonise et équilibre",
+    "pillarRightDescription": "Hesed - Le pilier de l'amour qui donne et expanse",
+    "pillarLeftColor": "#ff0000",
+    "pillarCenterColor": "#ffffff", 
+    "pillarRightColor": "#0000ff"
+  },
+
+ "sephiroth": [
+    {
+      "num": 1,
+      "id": "item1",
+      "name": "Kether",
+      "hebrew": "כתר",
+      "translation": "Couronne",
+      "icon": "👑",
+      "tooltip": "La couronne, l'origine divine (Principe suprème)",
+      "path":"<strong>Sekhel Moufla (Conscience Extraordinaire)</strong> : Une faculté transcendante permettant d'appréhender les mystères divins et les vérités supérieures",
+      "planet": "Neptune",
+      "astrology": "Intuition, spiritualité",
+      "glyph": "♆",
+      "numerology": "Le chiffre 1 représente l'unité absolue et la source primordiale de toute création. Kether incarne l'essence divine pure, contenant en germe toutes les autres Sephiroth",
+      "tarot": "<strong>Atziluth (Émanation)</strong> : As de Bâtons (Feu, Bélier) pure potentialité<br><strong>Beriah (Création)</strong> : As de Coupes (Eau, Cancer), jaillissement divin<br><strong>Yetzirah (Formation)</strong> : As d'Épées (Air, Balance), germe de conscience<br><strong>Assiah (Action)</strong> : As de Pentacles (Terre, Capricorne), naissance de la forme"
+    },
+    {
+      "num": 2,
+      "id": "item2",
+      "name": "Hochmah",
+      "hebrew": "חכמה",
+      "translation": "Sagesse",
+      "icon": "💡",
+      "tooltip": "La sagesse divine (Fécondation)",
+      "path": "<strong>Sekhel Mazhir (Conscience Splendide)</strong> : Une lumière intérieure qui illumine la compréhension et révèle la beauté des vérités cachées",
+      "planet": "Uranus",
+      "astrology": "Inspiration, transcendance",
+      "glyph": "♅",
+      "numerology": "Le chiffre 2 incarne la dualité et le mouvement créatif. Hochmah symbolise la sagesse divine, émergeant de l'unité pour initier la différenciation et l'expansion",
+      "tarot": "<strong>Atziluth</strong> (2 de Bâtons) : élan créatif<br><strong>Beriah</strong> (2 de Coupes) : union naissante<br><strong>Yetzirah</strong> (2 d'Épées) : confrontation mentale<br><strong>Assiah</strong> (2 de Pentacles) : équilibre initial"
+    },
+    {
+      "num": 3,
+      "id": "item3",
+      "name": "Binah",
+      "hebrew": "בינה",
+      "translation": "Intelligence",
+      "icon": "🧠",
+      "tooltip": "La compréhension (Révélation)",
+      "path": "<strong>Sekhel Meqoudesh (Conscience Sanctifiée)</strong> : Une pureté spirituelle qui élève l'âme et relie au sacré",
+      "planet": "Saturne",
+      "astrology": "Structure, discipline",
+      "glyph": "♄",
+      "numerology": "Le chiffre 3 représente la synthèse et la limitation nécessaire pour donner forme aux idées. Binah agit comme la matrice qui transforme les énergies en structures intelligibles",
+      "tarot": "<strong>Atziluth</strong> (3 de Bâtons) : vision structurante<br><strong>Beriah</strong> (3 de Coupes) : principe nourricier<br><strong>Yetzirah</strong> (3 d'Épées) : épreuve formatrice<br><strong>Assiah</strong> (3 de Pentacles) : planification concrète"
+    },
+    {
+      "num": 4,
+      "id": "item4",
+      "name": "Hesed",
+      "hebrew": "חסד",
+      "translation": "Grâce",
+      "icon": "🌱",
+      "tooltip": "La grâce et la bonté (Vivification)",
+      "path": "<strong>Sekhel Kavoua (Conscience Permanente)</strong> : Une stabilité spirituelle qui établit une compréhension durable et immuable",
+      "planet": "Jupiter",
+      "astrology": "Expansion, générosité",
+      "glyph": "♃",
+      "numerology": "Le chiffre 4 incarne la stabilité et l'expansion ordonnée. Hesed manifeste la bonté divine en créant un ordre harmonieux et bienveillant dans l'univers",
+      "tarot": "<strong>Atziluth</strong> (4 de Bâtons) : expansion joyeuse<br><strong>Beriah</strong> (4 de Coupes) : contemplation intérieure<br><strong>Yetzirah</strong> (4 d'Épées) : repos constructif<br><strong>Assiah</strong> (4 de Pentacles) : assise matérielle"
+    },
+    {
+      "num": 5,
+      "id": "item5",
+      "name": "Geburah",
+      "hebrew": "גבורה",
+      "translation": "Rigueur",
+      "icon": "💪",
+      "tooltip": "La rigueur et la force (Restriction)",
+      "path": "<strong>Sekhel Nishrash (Conscience Enracinée)</strong> : Une sagesse profondément ancrée, offrant une stabilité et une connexion aux fondements spirituels",
+      "planet": "Mars",
+      "astrology": "Force, action",
+      "glyph": "♂",
+      "numerology": "Le chiffre 5 représente la force, la discipline et l'équilibre dynamique. Geburah incarne la rigueur nécessaire pour contrebalancer l'expansion de Hesed",
+      "tarot": "<strong>Atziluth</strong> (5 de Bâtons) : rivalité stimulante<br><strong>Beriah</strong> (5 de Coupes) : chagrin purificateur<br><strong>Yetzirah</strong> (5 d'Épées) : tension intérieure<br><strong>Assiah</strong> (5 de Pentacles) : restriction concrète"
+    },
+    {
+      "num": 6,
+      "id": "item6",
+      "name": "Tiphereth",
+      "hebrew": "תפארת",
+      "translation": "Beauté",
+      "icon": "🌞",
+      "tooltip": "La beauté et l'harmonie (Unification)",
+      "path": "<strong>Sekhel Shefa Nivdal (Conscience de l'Influx Différencié)</strong> : Une perception qui discerne les flux spirituels distincts et leurs influences uniques",
+      "planet": "Soleil",
+      "astrology": "Vitalité, centralité",
+      "glyph": "☉",
+      "numerology": "Le chiffre 6 symbolise l'équilibre et l'unification des contraires. Tiphereth incarne l'harmonie parfaite, unissant le haut et le bas, le rigoureux et le gracieux",
+      "tarot": "<strong>Atziluth</strong> (6 de Bâtons) : triomphe équilibré<br><strong>Beriah</strong> (6 de Coupes) : partage sincère<br><strong>Yetzirah</strong> (6 d'Épées) : passage apaisé<br><strong>Assiah</strong> (6 de Pentacles) : générosité juste"
+    },
+    {
+      "num": 7,
+      "id": "item7",
+      "name": "Netsah",
+      "hebrew": "נצח",
+      "translation": "Victoire",
+      "icon": "🏆",
+      "tooltip": "La victoire et l'endurance (Harmonisation)",
+      "path": "<strong>Sekhel Nisstar (Conscience Cachée)</strong> : Une sagesse voilée, révélant des vérités profondes à travers le mystère et l'introspection",
+      "planet": "Vénus",
+      "astrology": "Amour, endurance",
+      "glyph": "♀",
+      "numerology": "Le chiffre 7 représente la victoire spirituelle, la persévérance et la quête de vérité. Netsah symbolise l'endurance divine, nécessaire pour réaliser des objectifs supérieurs",
+      "tarot": "<strong>Atziluth</strong> (7 de Bâtons) : persistance héroïque<br><strong>Beriah</strong> (7 de Coupes) : rêves inspirants<br><strong>Yetzirah</strong> (7 d'Épées) : stratégie rusée<br><strong>Assiah</strong> (7 de Pentacles) : patience en gestation"
+    },
+    {
+      "num": 8,
+      "id": "item8",
+      "name": "Hod",
+      "hebrew": "הוד",
+      "translation": "Gloire",
+      "icon": "🌟",
+      "tooltip": "La gloire et la splendeur (Médiation)",
+      "path": "<strong>Sekhel Shalem (Conscience Parfaite)</strong> : Une harmonie complète qui unifie la sagesse et l'intuition dans une compréhension absolue",
+      "planet": "Mercure",
+      "astrology": "Communication, analyse",
+      "glyph": "☿",
+      "numerology": "Le chiffre 8 reflète la gloire qui découle de l'équilibre et de la reconnaissance du divin. Hod structure les formes spirituelles par l'intellect et la réflexion",
+      "tarot": "<strong>Atziluth</strong> (8 de Bâtons) : accélération subite<br><strong>Beriah</strong> (8 de Coupes) : lâcher-prise<br><strong>Yetzirah</strong> (8 d'Épées) : limitation mentale<br><strong>Assiah</strong> (8 de Pentacles) : perfectionnement laborieux"
+    },
+    {
+      "num": 9,
+      "id": "item9",
+      "name": "Yesod",
+      "hebrew": "יסוד",
+      "translation": "Fondement",
+      "icon": "🌙",
+      "tooltip": "La fondation (Coagulation)",
+      "path": "<strong>Sekhel Tahor (Conscience Pure)</strong> : Une clarté immaculée qui élève l'esprit et perçoit sans altération les vérités spirituelles",
+      "planet": "Lune",
+      "astrology": "Émotions, subconscient",
+      "glyph": "☽",
+      "numerology": "Le chiffre 9 symbolise la fondation et la transmission. Yesod agit comme un réceptacle des énergies divines prêtes à se manifester dans le monde physique",
+      "tarot": "<strong>Atziluth</strong> (9 de Bâtons) : ultime résistance<br><strong>Beriah</strong> (9 de Coupes) : satisfaction intérieure<br><strong>Yetzirah</strong> (9 d'Épées) : anxiété purificatrice<br><strong>Assiah</strong> (9 de Pentacles) : prospérité solitaire"
+    },
+    {
+      "num": 10,
+      "id": "item10",
+      "name": "Malkuth",
+      "hebrew": "מלכות",
+      "translation": "Royaume",
+      "icon": "🌍",
+      "tooltip": "Le royaume, la manifestation (Incarnation)",
+      "path": "<strong>Sekhel Mitnotsets (Conscience Étincelante)</strong> : Une intuition vive et lumineuse, révélant des éclats de sagesse spirituelle",
+      "planet": "Terre",
+      "astrology": "Manifestation, réalité physique",
+      "glyph": "⊕",
+      "numerology": "Le chiffre 10 incarne la complétion et la manifestation des énergies divines. Malkuth est le reflet de la perfection spirituelle dans le monde matériel",
+      "tarot": "<strong>Atziluth</strong> (10 de Bâtons) : lourde responsabilité<br><strong>Beriah</strong> (10 de Coupes) : bonheur accompli<br><strong>Yetzirah</strong> (10 d'Épées) : crise libératrice<br><strong>Assiah</strong> (10 de Pentacles) : accomplissement matériel"
+    },
+    {
+      "id": "daath",
+      "name": "Daath",
+      "hebrew": "דעת",
+      "translation": "Connaissance",
+      "icon": "🌌",
+      "tooltip": "La connaissance cachée",
+      "planet": "Pluton",
+      "astrology": "Transformation, mystère<br><video class='video-papesse' autoplay muted loop playsinline><source src='assets/video/papesse.mp4' type='video/mp4'>Votre navigateur ne supporte pas les vidéos HTML5.</video><!-- <br><video class='video-body' autoplay muted loop playsinline><source src='assets/video/haut-papesse.mp4' type='video/mp4'>Votre navigateur ne supporte pas les vidéos HTML5.</video> !-->",
+      "glyph": "♇",
+      "numerology": "Daath, bien qu'incompté, représente le seuil vers une connaissance transcendante qui relie le caché et le manifesté"
+    }
+  ],
+
+
+  "cineroth": [
+    {
+      "num": 11,
+      "id": "item11",
+      "connection": {       
+        "startId": "item1",
+        "endId": "item2",
+        "description": "Kether à Hochmah, représentant le souffle divin"
+      },
+      "letter": { "number": 1, "hebrew": "א", "name": "Aleph", "meaning": "Bœuf", "icon": "🐄" },
+      "numerology": "Aleph, associé au chiffre 1, représente l'unité fondamentale et le souffle divin. Il symbolise la potentialité infinie de Kether traduite en sagesse active par Hochmah. Aleph agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Bateleur",
+        "number": 1,
+        "symbolism": "Représente le potentiel et le commencement"
+      },
+      "consciousness": "<strong>Conscience limpide :</strong> Une clarté absolue qui perçoit les vérités sans déformation ni entrave",
+      "yetsiratic": { "correspondence": "Air", "glyph": "△̲", "meaning": "L'Esprit" },
+      "cinerMeaning": "Représente le souffle divin qui inspire la sagesse"
+    },
+    {
+      "num": 12,
+      "id": "item12",
+      "connection": {
+        "startId": "item1",
+        "endId": "item3",
+        "description": "Kether à Binah, symbolisant la création"
+      },
+      "letter": { "number": 2, "hebrew": "ב", "name": "Beith", "meaning": "Maison", "icon": "🏠" },
+      "numerology": "Beith, associé au chiffre 2, représente la dualité et la création. Il symbolise la sagesse divine qui émerge de l'unité de Kether pour initier la différenciation et la création. Beith agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Papesse",
+        "number": 2,
+        "symbolism": "Représente la connaissance et la sagesse"
+      },
+      "consciousness": "<strong>Conscience claire :</strong> Une perception illuminée qui discerne la sagesse cachée dans la création",
+      "yetsiratic": { "correspondence": "Saturne", "glyph": "♄", "meaning": "La Matière" },
+      "cinerMeaning": "Représente la création de l'univers et de la matière"
+    },
+    {
+      "num": 13,
+      "id": "item13",
+      "connection": {
+        "startId": "item1",
+        "endId": "item6",
+        "description": "Kether à Tiphereth, incarnant l'équilibre"
+      },
+      "letter": { "number": 3, "hebrew": "ג", "name": "Guimel", "meaning": "Chameau", "icon": "🐫" },
+      "numerology": "Guimel, associé au chiffre 3, représente l'abondance et la créativité. Il symbolise l'équilibre parfait entre le haut et le bas, le rigoureux et le gracieux. Guimel agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "L'Impératrice",
+        "number": 3,
+        "symbolism": "Représente l'abondance et la créativité"
+      },
+      "consciousness": "<strong>Conscience unificatrice :</strong> Une cohésion profonde qui embrasse toutes les énergies pour les fondre en une harmonie absolue",
+      "yetsiratic": { "correspondence": "Jupiter", "glyph": "♃", "meaning": "La Vie" },
+      "cinerMeaning": "Symbolise l'équilibre entre les forces cosmiques"
+    },
+    {
+      "num": 14,
+      "id": "item14",
+      "connection": {
+        "startId": "item2",
+        "endId": "item3",
+        "description": "Hochmah à Binah, symbolisant la porte de la compréhension"
+      },
+      "letter": { "number": 4, "hebrew": "ד", "name": "Daleth", "meaning": "Porte", "icon": "🚪" },
+      "numerology": "Daleth, associé au chiffre 4, représente la porte et la transition. Il symbolise la sagesse divine qui émerge de la dualité de Hochmah pour initier la compréhension et la transformation. Daleth agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "L'Empereur",
+        "number": 4,
+        "symbolism": "Représente la stabilité et l'autorité"
+      },
+      "consciousness": "<strong>Conscience illuminatrice :</strong> Un rayonnement intérieur qui révèle la sagesse cachée et élargit la perspective de l'âme",
+      "yetsiratic": { "correspondence": "Mars", "glyph": "♂", "meaning": "La Forme" },
+      "cinerMeaning": "Symbolise la transition vers une connaissance plus profonde"
+    },
+    {
+      "num": 15,
+      "id": "item15",
+      "connection": {
+        "startId": "item2",
+        "endId": "item6",
+        "description": "Hochmah à Tiphereth, représentant l'expansion divine"
+      },
+      "letter": { "number": 5, "hebrew": "ה", "name": "Hé", "meaning": "Fenêtre", "icon": "🪟" },
+      "numerology": "Hé, associé au chiffre 5, représente l'expansion et la créativité. Il symbolise l'expansion de la sagesse divine qui émerge de la dualité de Hochmah pour initier la création et l'expansion. Hé agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Pape",
+        "number": 5,
+        "symbolism": "Représente la sagesse et la spiritualité"
+      },
+      "consciousness": "<strong>Conscience stabilisante :</strong> Un équilibre subtil qui soutient l'évolution spirituelle et renforce la paix intérieure",
+      "yetsiratic": { "correspondence": "Bélier", "glyph": "♈", "meaning": "La Volonté" },
+      "cinerMeaning": "Incarne l'extension de l'esprit divin dans l'univers"
+    },
+    {
+      "num": 16,
+      "id": "item16",
+      "connection": {
+        "startId": "item2",
+        "endId": "item4",
+        "description": "Hochmah à Hesed, incarnant la connexion entre le ciel et la terre"
+      },
+      "letter": { "number": 6, "hebrew": "ו", "name": "Vav", "meaning": "Clou", "icon": "🪚" },
+      "numerology": "Vav, associé au chiffre 6, représente la connexion et la communication. Il symbolise la sagesse divine qui émerge de la dualité de Hochmah pour initier la communication et la connexion. Vav agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "L'Amoureux",
+        "number": 6,
+        "symbolism": "Représente l'amour et la connexion"
+      },
+      "consciousness": "<strong>Conscience glorieuse :</strong> Une exaltation de l'esprit qui célèbre l'union du Ciel et de la Terre dans la manifestation divine",
+      "yetsiratic": { "correspondence": "Taureau", "glyph": "♉", "meaning": "La Substance" },
+      "cinerMeaning": "Exprime l'union des forces terrestres et divines"
+    },
+    {
+      "num": 17,
+      "id": "item17",
+      "connection": {
+        "startId": "item3",
+        "endId": "item6",
+        "description": "Binah à Tiphereth, symbolisant la lutte pour l'harmonie"
+      },
+      "letter": { "number": 7, "hebrew": "ז", "name": "Zaïn", "meaning": "Épée", "icon": "🗡️" },
+      "numerology": "Zaïn, associé au chiffre 7, représente la lutte et la victoire. Il symbolise la lutte pour l'harmonie qui émerge de la dualité de Binah pour initier la victoire et la lutte. Zaïn agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Chariot",
+        "number": 7,
+        "symbolism": "Représente la victoire et le contrôle"
+      },
+      "consciousness": "<strong>Conscience sensible :</strong> Une perception éveillée qui explore la profondeur des sensations pour atteindre l'harmonie intérieure",
+      "yetsiratic": { "correspondence": "Gémeaux", "glyph": "♊", "meaning": "La Pensée" },
+      "cinerMeaning": "Incarne la quête de l'équilibre intérieur, la victoire sur soi-même"
+    },
+    {
+      "num": 18,
+      "id": "item18",
+      "connection": {
+        "startId": "item3",
+        "endId": "item5",
+        "description": "Binah à Geburah, représentant la force intérieure"
+      },
+      "letter": { "number": 8, "hebrew": "ח", "name": "Heith", "meaning": "Clôture", "icon": "🔒" },
+      "numerology": "Heith, associé au chiffre 8, représente la gloire et la splendeur. Il symbolise la gloire qui découle de l'équilibre et de la reconnaissance du divin. Heith agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Justice",
+        "number": 8,
+        "symbolism": "Représente l'équité et l'équilibre"
+      },
+      "consciousness": "<strong>Conscience protectrice :</strong> Un flux d'énergie qui fortifie l'esprit et soutient la discipline dans la quête de la justice",
+      "yetsiratic": { "correspondence": "Cancer", "glyph": "♋", "meaning": "La Mémoire" },
+      "cinerMeaning": "Symbolise la protection et la discipline"
+    },
+    {
+      "num": 19,
+      "id": "item19",
+      "connection": {
+        "startId": "item4",
+        "endId": "item5",
+        "description": "Hesed à Geburah, incarnant l'équilibre entre grâce et rigueur"
+      },
+      "letter": { "number": 9, "hebrew": "ט", "name": "Teith", "meaning": "Serpent", "icon": "🐍" },
+      "numerology": "Teith, associé au chiffre 9, représente la transformation et la révélation. Il symbolise la transformation qui émerge de la dualité de Hesed pour initier la révélation et la transformation. Teith agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "L'Ermite",
+        "number": 9,
+        "symbolism": "Représente la sagesse intérieure"
+      },
+      "consciousness": "<strong>Conscience intérieure :</strong> Une lumière subtile qui guide la recherche de la vérité et nourrit la sagesse authentique",
+      "yetsiratic": { "correspondence": "Lion", "glyph": "♌", "meaning": "La Créativité" },
+      "cinerMeaning": "Illustre la recherche de la vérité spirituelle"
+    },
+    {
+      "num": 20,
+      "id": "item20",
+      "connection": {
+        "startId": "item4",
+        "endId": "item6",
+        "description": "Hesed à Tiphereth, symbolisant la voie de la compassion"
+      },
+      "letter": { "number": 10, "hebrew": "י", "name": "Yod", "meaning": "Main", "icon": "🤝" },
+      "numerology": "Yod, associé au chiffre 10, représente la main et la création. Il symbolise la création qui émerge de la dualité de Hesed pour initier la main et la création. Yod agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Roue de Fortune",
+        "number": 10,
+        "symbolism": "Représente le destin et les cycles"
+      },
+      "consciousness": "<strong>Conscience cyclique :</strong> Une compréhension profonde des rythmes de la vie et de la destinée divine",
+      "yetsiratic": { "correspondence": "Vierge", "glyph": "♍", "meaning": "L'Action" },
+      "cinerMeaning": "Symbolise les cycles de la manifestation divine"
+    },
+    {
+      "num": 21,
+      "id": "item21",
+      "connection": {
+        "startId": "item4",
+        "endId": "item7",
+        "description": "Hesed à Netsah, incarnant la victoire de l'amour"
+      },
+      "letter": { "number": 20, "hebrew": "כ", "name": "Kaph", "meaning": "Paume", "icon": "🖐️" },
+      "numerology": "Kaph, associé au chiffre 20, représente la paume et la création. Il symbolise la création qui émerge de la dualité de Hesed pour initier la paume et la création. Kaph agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Force",
+        "number": 11,
+        "symbolism": "Représente la force spirituelle"
+      },
+      "consciousness": "<strong>Conscience réceptive :</strong> Une ouverture totale à la grâce divine qui nourrit l'âme et inspire l'action juste",
+      "yetsiratic": { "correspondence": "Jupiter", "glyph": "♃", "meaning": "La Puissance" },
+      "cinerMeaning": "Représente la réception de la grâce divine"
+    },
+    {
+      "num": 22,
+      "id": "item22",
+      "connection": {
+        "startId": "item5",
+        "endId": "item6",
+        "description": "Geburah à Tiphereth, symbolisant l'équilibre des forces"
+      },
+      "letter": { "number": 30, "hebrew": "ל", "name": "Lamed", "meaning": "Aiguillon", "icon": "🔍" },
+      "numerology": "Lamed, associé au chiffre 30, représente la lumière et la sagesse. Il symbolise la sagesse divine qui émerge de la dualité de Geburah pour initier la lumière et la sagesse. Lamed agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Pendu",
+        "number": 12,
+        "symbolism": "Représente le sacrifice et la transformation"
+      },
+      "consciousness": "<strong>Conscience sacrificielle :</strong> Un abandon confiant qui transforme l'être et révèle la sagesse cachée",
+      "yetsiratic": { "correspondence": "Balance", "glyph": "♎", "meaning": "L'Équilibre" },
+      "cinerMeaning": "Incarne le sacrifice nécessaire à l'évolution spirituelle"
+    },
+    {
+      "num": 23,
+      "id": "item23",
+      "connection": {
+        "startId": "item5",
+        "endId": "item8",
+        "description": "Geburah à Hod, symbolisant l'eau purificatrice"
+      },
+      "letter": { "number": 40, "hebrew": "מ", "name": "Mem", "meaning": "Eau", "icon": "💧" },
+      "numerology": "Mem, associé au chiffre 40, représente l'eau et la purification. Il symbolise la purification qui émerge de la dualité de Geburah pour initier l'eau et la purification. Mem agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Mort",
+        "number": 13,
+        "symbolism": "Représente la transformation et le renouveau"
+      },
+      "consciousness": "<strong>Conscience purificatrice :</strong> Un flux régénérant qui transforme et renouvelle l'être dans la profondeur de son essence",
+      "yetsiratic": { "correspondence": "Eau", "glyph": "▽", "meaning": "L'Émotion" },
+      "cinerMeaning": "Incarne la purification et le changement"
+    },
+    {
+      "num": 24,
+      "id": "item24",
+      "connection": {
+        "startId": "item6",
+        "endId": "item7",
+        "description": "Tiphereth à Netsah, représentant la continuité"
+      },
+      "letter": { "number": 50, "hebrew": "נ", "name": "Noun", "meaning": "Poisson", "icon": "🐟" },
+      "numerology": "Noun, associé au chiffre 50, représente la continuité et la fluidité. Il symbolise la continuité qui émerge de la dualité de Tiphereth pour initier la fluidité et la continuité. Noun agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Tempérance",
+        "number": 14,
+        "symbolism": "Représente la modération et l'harmonie"
+      },
+      "consciousness": "<strong>Conscience imaginative :</strong> Une vision intérieure qui embrasse la fluidité de la vie et favorise l'harmonie universelle",
+      "yetsiratic": { "correspondence": "Scorpion", "glyph": "♏", "meaning": "L'Imagination" },
+      "cinerMeaning": "Symbolise la fluidité et l'adaptation"
+    },
+    {
+      "num": 25,
+      "id": "item25",
+      "connection": {
+        "startId": "item6",
+        "endId": "item9",
+        "description": "Tiphereth à Yesod, incarnant le soutien"
+      },
+      "letter": { "number": 60, "hebrew": "ס", "name": "Samech", "meaning": "Soutien", "icon": "💪" },
+      "numerology": "Samech, associé au chiffre 60, représente le soutien et la protection. Il symbolise la protection qui émerge de la dualité de Tiphereth pour initier le soutien et la protection. Samech agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Diable",
+        "number": 15,
+        "symbolism": "Représente les tentations et les entraves"
+      },
+      "consciousness": "<strong>Conscience éprouvée :</strong> Un état lucide qui transcende les tentations et soutient la foi dans l'ascension spirituelle",
+      "yetsiratic": { "correspondence": "Sagittaire", "glyph": "♐", "meaning": "La Foi" },
+      "cinerMeaning": "Met en lumière les défis à surmonter"
+    },
+    {
+      "num": 26,
+      "id": "item26",
+      "connection": {
+        "startId": "item6",
+        "endId": "item8",
+        "description": "Tiphereth à Hod, symbolisant l'œil divin"
+      },
+      "letter": { "number": 70, "hebrew": "ע", "name": "Ayin", "meaning": "Œil", "icon": "👁️" },
+      "numerology": "Ayin, associé au chiffre 70, représente l'œil et la vision. Il symbolise la vision qui émerge de la dualité de Tiphereth pour initier l'œil et la vision. Ayin agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Maison Dieu",
+        "number": 16,
+        "symbolism": "Représente la rupture et la révélation"
+      },
+      "consciousness": "<strong>Conscience renouvelée :</strong> Un éclair spirituel qui dévoile les vérités cachées et suscite l'éveil de l'âme",
+      "yetsiratic": { "correspondence": "Capricorne", "glyph": "♑", "meaning": "La Transformation" },
+      "cinerMeaning": "Incarne l'éveil soudain et la prise de conscience"
+    },
+    {
+      "num": 27,
+      "id": "item27",
+      "connection": {
+        "startId": "item7",
+        "endId": "item8",
+        "description": "Netsah à Hod, représentant la communication"
+      },
+      "letter": { "number": 80, "hebrew": "פ", "name": "Phé", "meaning": "Bouche", "icon": "👄" },
+      "numerology": "Phé, associé au chiffre 80, représente la bouche et la communication. Il symbolise la communication qui émerge de la dualité de Netsah pour initier la bouche et la communication. Phé agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Les Étoiles",
+        "number": 17,
+        "symbolism": "Représente l'espoir et l'inspiration"
+      },
+      "consciousness": "<strong>Conscience expressive</strong> : une intimité profonde avec la parole sacrée qui permet de communiquer la beauté de l'univers",
+      "yetsiratic": { "correspondence": "Vénus", "glyph": "♀", "meaning": "La Beauté" },
+      "cinerMeaning": "Symbolise l'expression et le partage"
+    },
+    {
+      "num": 28,
+      "id": "item28",
+      "connection": {
+        "startId": "item7",
+        "endId": "item9",
+        "description": "Netsah à Yesod, symbolisant la fidélité"
+      },
+      "letter": { "number": 90, "hebrew": "צ", "name": "Tsadé", "meaning": "Hameçon", "icon": "🪝" },
+      "numerology": "Tsadé, associé au chiffre 90, représente la fidélité et la confiance. Il symbolise la confiance qui émerge de la dualité de Netsah pour initier la fidélité et la confiance. Tsadé agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "La Lune",
+        "number": 18,
+        "symbolism": "Représente le subconscient et les illusions"
+      },
+      "consciousness": "<strong>Conscience naturelle :</strong> Une réceptivité intuitive qui intègre l'inconnu et fait confiance à la guidance subtile",
+      "yetsiratic": { "correspondence": "Verseau", "glyph": "♒", "meaning": "La Connaissance" },
+      "cinerMeaning": "Incarne la confiance en l'inconnu"
+    },
+    {
+      "num": 29,
+      "id": "item29",
+      "connection": {
+        "startId": "item7",
+        "endId": "item10",
+        "description": "Netsah à Malkuth, incarnant le cycle de la vie"
+      },
+      "letter": { "number": 100, "hebrew": "ק", "name": "Qôf", "meaning": "Nuque", "icon": "🔗" },
+      "numerology": "Qôf, associé au chiffre 100, représente la nuque et la vitalité. Il symbolise la vitalité qui émerge de la dualité de Netsah pour initier la nuque et la vitalité. Qôf agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Soleil",
+        "number": 19,
+        "symbolism": "Représente la joie et la réussite"
+      },
+      "consciousness": "<strong>Conscience incarnée :</strong> Une vitalité profonde qui célèbre la manifestation du divin dans la matière et accomplit le cycle de la vie",
+      "yetsiratic": { "correspondence": "Poissons", "glyph": "♓", "meaning": "La Réalisation" },
+      "cinerMeaning": "Symbolise la manifestation du divin sur terre"
+    },
+    {
+      "num": 30,
+      "id": "item30",
+      "connection": {
+        "startId": "item8",
+        "endId": "item9",
+        "description": "Hod à Yesod, représentant l'humilité"
+      },
+      "letter": { "number": 200, "hebrew": "ר", "name": "Reish", "meaning": "Tête", "icon": "🧠" },
+      "numerology": "Reish, associé au chiffre 200, représente la tête et la sagesse. Il symbolise la sagesse divine qui émerge de la dualité de Hod pour initier la tête et la sagesse. Reish agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Jugement",
+        "number": 20,
+        "symbolism": "Représente le renouveau et la libération"
+      },
+      "consciousness": "<strong>Conscience du renouveau :</strong> Une lucidité globale qui éveille le discernement intérieur et conduit à la libération de l'esprit",
+      "yetsiratic": { "correspondence": "Mercure", "glyph": "☿", "meaning": "La Communication" },
+      "cinerMeaning": "Incarne le jugement intérieur et la renaissance"
+    },
+    {
+      "num": 31,
+      "id": "item31",
+      "connection": {
+        "startId": "item8",
+        "endId": "item10",
+        "description": "Hod à Malkuth, représentant le feu purificateur"
+      },
+      "letter": { "number": 300, "hebrew": "ש", "name": "Shin", "meaning": "Dent", "icon": "🦷" },
+      "numerology": "Shin, associé au chiffre 300, représente la dent et la purification. Il symbolise la purification qui émerge de la dualité de Hod pour initier la dent et la purification. Shin agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Fou",
+        "number": 0,
+        "symbolism": "Représente le potentiel illimité et le voyage"
+      },
+      "consciousness": "<strong>Conscience inextinguible :</strong> Une flamme perpétuelle qui initie l'être à une transformation profonde et un nouveau départ spirituel",
+      "yetsiratic": { "correspondence": "Feu", "glyph": "△", "meaning": "La Force" },
+      "cinerMeaning": "Symbolise le début d'un nouveau voyage spirituel"
+    },
+    {
+      "num": 32,
+      "id": "item32",
+      "connection": {
+        "startId": "item9",
+        "endId": "item10",
+        "description": "Yesod à Malkuth, incarnant la vérité"
+      },
+      "letter": { "number": 400, "hebrew": "ת", "name": "Tav", "meaning": "Croix", "icon": "✝️" },
+      "numerology": "Tav, associé au chiffre 400, représente la croix et la vérité. Il symbolise la vérité qui émerge de la dualité de Yesod pour initier la croix et la vérité. Tav agit comme le canal de l'énergie créatrice divine, unissant l'infini et le manifesté.",
+      "tarot": {
+        "name": "Le Monde",
+        "number": 21,
+        "symbolism": "Représente l'accomplissement et l'unité"
+      },
+      "consciousness": "<strong>Conscience aboutie :</strong> Une plénitude ultime qui révèle la vérité fondamentale de l'existence et l'union parfaite avec la Source",
+      "yetsiratic": { "correspondence": "Lune", "glyph": "☽", "meaning": "L'Émotion" },
+      "cinerMeaning": "Incarne la réalisation finale et l'union avec le divin"
+    }
+  ]
+
+}

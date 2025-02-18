@@ -1,0 +1,567 @@
+{
+  "metadata": {
+    "author": "Vincent",
+    "version": "1.0",
+    "description": "Representation of the 32 Paths of the Kabbalistic Tree of Life",
+    "date": "2025-01-04",
+    "language": "en",
+    "lastUpdate": "2025-01-18"
+  },
+
+  "pageTitle": {
+    "pageTitleTxt": "The Tree of Life (עץ החיים): 32 Paths of Wisdom",
+    "tooltipTitleTxt": "10 Sephiroth (divine spheres) and 22 Paths of the Tree of Life, symbolizing the aspects and connections of the universe according to Kabbalah"
+  },
+
+  "infinitySymbol": {
+    "infinitySymbolTxt": "[ Aïn Soph (אין סוף) ]",
+    "tooltipinfiniSymbolTxt": "∞, Ultimate Source of existence.<br>The divine Infinity, beyond limits and all understanding"
+  },
+
+  "pillars": {
+  "pillarLeftTxt": "[ Severity (Geburah) ]",
+  "pillarCenterTxt": "[ Balance (Central) ]",
+  "pillarRightTxt": "[ Mercy (Chesed) ]",
+  "tooltipPillarLeftTxt": "Pillar of severity: justice, strength, discipline, and divine restriction",
+  "tooltipPillarCenterTxt": "Pillar of harmony: perfect balance, mediation, divine consciousness, and will",
+  "tooltipPillarRightTxt": "Pillar of mercy: compassion, love, clemency, and divine expansion",
+  "pillarLeftDescription": "Geburah - The pillar of strength that structures and limits",
+  "pillarCenterDescription": "Emtsa - The central pillar that harmonizes and balances",
+  "pillarRightDescription": "Hesed - The pillar of love that gives and expands",
+  "pillarLeftColor": "#ff0000",
+  "pillarCenterColor": "#ffffff",
+  "pillarRightColor": "#0000ff"
+},
+
+
+  "sephiroth": [
+    {
+      "num": 1,
+      "id": "item1",
+      "name": "Kether",
+      "hebrew": "כתר",
+      "translation": "Crown",
+      "tooltip": "The crown, the divine origin (Supreme Principle)",
+      "path": "<strong>Sekhel Moufla (Extraordinary Consciousness)</strong>: a transcendent faculty allowing the apprehension of divine mysteries and higher truths",
+      "planet": "Neptune",
+      "astrology": "Intuition, spirituality",
+      "glyph": "♆"
+    },
+    {
+      "num": 2,
+      "id": "item2",
+      "name": "Hochmah",
+      "hebrew": "חכמה",
+      "translation": "Wisdom",
+      "tooltip": "Divine wisdom (Fecundation)",
+      "path": "<strong>Sekhel Mazhir (Splendid Consciousness)</strong>: an inner light that illuminates understanding and reveals the beauty of hidden truths",
+      "planet": "Uranus",
+      "astrology": "Inspiration, transcendence",
+      "glyph": "♅"
+    },
+    {
+      "num": 3,
+      "id": "item3",
+      "name": "Binah",
+      "hebrew": "בינה",
+      "translation": "Intelligence",
+      "tooltip": "Understanding (Revelation)",
+      "path": "<strong>Sekhel Meqoudesh (Sanctified Consciousness)</strong>: a spiritual purity that elevates the soul and connects to the sacred",
+      "planet": "Saturn",
+      "astrology": "Structure, discipline",
+      "glyph": "♄"
+    },
+    {
+      "num": 4,
+      "id": "item4",
+      "name": "Hesed",
+      "hebrew": "חסד",
+      "translation": "Grace",
+      "tooltip": "Grace and kindness (Vivification)",
+      "path": "<strong>Sekhel Kavoua (Permanent Consciousness)</strong>: a spiritual stability that establishes a lasting and immutable understanding",
+      "planet": "Jupiter",
+      "astrology": "Expansion, generosity",
+      "glyph": "♃"
+    },
+    {
+      "num": 5,
+      "id": "item5",
+      "name": "Geburah",
+      "hebrew": "גבורה",
+      "translation": "Severity",
+      "tooltip": "Severity and strength (Restriction)",
+      "path": "<strong>Sekhel Nishrash (Rooted Consciousness)</strong>: a deeply rooted wisdom, offering stability and a connection to spiritual foundations",
+      "planet": "Mars",
+      "astrology": "Strength, action",
+      "glyph": "♂"
+    },
+    {
+      "num": 6,
+      "id": "item6",
+      "name": "Tiphereth",
+      "hebrew": "תפארת",
+      "translation": "Beauty",
+      "tooltip": "Beauty and harmony (Unification)",
+      "path": "<strong>Sekhel Shefa Nivdal (Consciousness of Differentiated Influx)</strong>: a perception that discerns distinct spiritual flows and their unique influences",
+      "planet": "Sun",
+      "astrology": "Vitality, centrality",
+      "glyph": "☉"
+    },
+    {
+      "num": 7,
+      "id": "item7",
+      "name": "Netsah",
+      "hebrew": "נצח",
+      "translation": "Eternity",
+      "tooltip": "Eternity and endurance (Harmonization)",
+      "path": "<strong>Sekhel Nisstar (Hidden Consciousness)</strong>: a veiled wisdom, revealing deep truths through mystery and introspection",
+      "planet": "Venus",
+      "astrology": "Love, endurance",
+      "glyph": "♀"
+    },
+    {
+      "num": 8,
+      "id": "item8",
+      "name": "Hod",
+      "hebrew": "הוד",
+      "translation": "Glory",
+      "tooltip": "Glory and splendor (Mediation)",
+      "path": "<strong>Sekhel Shalem (Perfect Consciousness)</strong>: a complete harmony that unifies wisdom and intuition in absolute understanding",
+      "planet": "Mercury",
+      "astrology": "Communication, analysis",
+      "glyph": "☿"
+    },
+    {
+      "num": 9,
+      "id": "item9",
+      "name": "Yesod",
+      "hebrew": "יסוד",
+      "translation": "Foundation",
+      "tooltip": "Foundation (Coagulation)",
+      "path": "<strong>Sekhel Tahor (Pure Consciousness)</strong>: an immaculate clarity that elevates the spirit and perceives spiritual truths without distortion or hindrance",
+      "planet": "Moon",
+      "astrology": "Emotions, subconscious",
+      "glyph": "☽"
+    },
+    {
+      "num": 10,
+      "id": "item10",
+      "name": "Malkuth",
+      "hebrew": "מלכות",
+      "translation": "Kingdom",
+      "tooltip": "The kingdom, manifestation (Incarnation)",
+      "path": "<strong>Sekhel Mitnotsets (Sparkling Consciousness)</strong>: a vivid and luminous intuition, revealing sparks of spiritual wisdom",
+      "planet": "Earth",
+      "astrology": "Manifestation, physical reality",
+      "glyph": "⊕"
+    },
+    {
+      "id": "daath",
+      "name": "Daath",
+      "hebrew": "דעת",
+      "translation": "Knowledge",
+      "tooltip": "Hidden knowledge",
+      "planet": "Pluto",
+      "astrology": "Transformation, mystery",
+      "glyph": "♇"
+    }
+  ],
+  "cineroth": [
+    {
+      "num": 11,
+      "id": "item11",
+      "connection": {       
+        "startId": "item1",
+        "endId": "item2",
+        "description": "Kether to Hochmah, representing the divine breath"
+      },
+      "letter": { "number": 1, "hebrew": "א", "name": "Aleph", "meaning": "Ox" },
+      "tarot": {
+        "name": "The Magician",
+        "number": 1,
+        "symbolism": "Represents potential and beginning"
+      },
+      "consciousness": "Clear consciousness, an absolute clarity that perceives truths without distortion or hindrance",
+      "yetsiratic": { "correspondence": "Air", "glyph": "△̲", "meaning": "The Spirit" },
+      "cinerMeaning": "Represents the divine breath that inspires wisdom"
+    },
+    {
+      "num": 12,
+      "id": "item12",
+      "connection": {
+        "startId": "item1",
+        "endId": "item3",
+        "description": "Kether to Binah, symbolizing creation"
+      },
+      "letter": { "number": 2, "hebrew": "ב", "name": "Beith", "meaning": "House" },
+      "tarot": {
+        "name": "The High Priestess",
+        "number": 2,
+        "symbolism": "Represents knowledge and wisdom"
+      },
+      "consciousness": "Clear consciousness, an illuminated perception that discerns the hidden wisdom in creation",
+      "yetsiratic": { "correspondence": "Saturn", "glyph": "♄", "meaning": "Matter" },
+      "cinerMeaning": "Represents the creation of the universe and matter"
+    },
+    {
+      "num": 13,
+      "id": "item13",
+      "connection": {
+        "startId": "item1",
+        "endId": "item6",
+        "description": "Kether to Tiphereth, embodying balance"
+      },
+      "letter": { "number": 3, "hebrew": "ג", "name": "Guimel", "meaning": "Camel" },
+      "tarot": {
+        "name": "The Empress",
+        "number": 3,
+        "symbolism": "Represents abundance and creativity"
+      },
+      "consciousness": "Unifying consciousness, a deep cohesion that embraces all energies to merge them into absolute harmony",
+      "yetsiratic": { "correspondence": "Jupiter", "glyph": "♃", "meaning": "Life" },
+      "cinerMeaning": "Symbolizes the balance between cosmic forces"
+    },
+    {
+      "num": 14,
+      "id": "item14",
+      "connection": {
+        "startId": "item2",
+        "endId": "item3",
+        "description": "Hochmah to Binah, symbolizing the gateway of understanding"
+      },
+      "letter": { "number": 4, "hebrew": "ד", "name": "Daleth", "meaning": "Door" },
+      "tarot": {
+        "name": "The Emperor",
+        "number": 4,
+        "symbolism": "Represents stability and authority"
+      },
+      "consciousness": "Illuminating consciousness, an inner radiance that reveals hidden wisdom and broadens the soul's perspective",
+      "yetsiratic": { "correspondence": "Mars", "glyph": "♂", "meaning": "Form" },
+      "cinerMeaning": "Symbolizes the transition to a deeper knowledge"
+    },
+    {
+      "num": 15,
+      "id": "item15",
+      "connection": {
+        "startId": "item2",
+        "endId": "item6",
+        "description": "Hochmah to Tiphereth, representing divine expansion"
+      },
+      "letter": { "number": 5, "hebrew": "ה", "name": "Hé", "meaning": "Window" },
+      "tarot": {
+        "name": "The Hierophant",
+        "number": 5,
+        "symbolism": "Represents wisdom and spirituality"
+      },
+      "consciousness": "Stabilizing consciousness, a subtle balance that supports spiritual evolution and reinforces inner peace",
+      "yetsiratic": { "correspondence": "Aries", "glyph": "♈", "meaning": "Will" },
+      "cinerMeaning": "Embodies the extension of the divine spirit into the universe"
+    },
+    {
+      "num": 16,
+      "id": "item16",
+      "connection": {
+        "startId": "item2",
+        "endId": "item4",
+        "description": "Hochmah to Hesed, embodying the connection between heaven and earth"
+      },
+      "letter": { "number": 6, "hebrew": "ו", "name": "Vav", "meaning": "Nail" },
+      "tarot": {
+        "name": "The Lovers",
+        "number": 6,
+        "symbolism": "Represents love and connection"
+      },
+      "consciousness": "Glorious consciousness, an exaltation of the spirit that celebrates the union of Heaven and Earth in the divine manifestation",
+      "yetsiratic": { "correspondence": "Taurus", "glyph": "♉", "meaning": "Substance" },
+      "cinerMeaning": "Expresses the union of earthly and divine forces"
+    },
+    {
+      "num": 17,
+      "id": "item17",
+      "connection": {
+        "startId": "item3",
+        "endId": "item6",
+        "description": "Binah to Tiphereth, symbolizing the struggle for harmony"
+      },
+      "letter": { "number": 7, "hebrew": "ז", "name": "Zaïn", "meaning": "Sword" },
+      "tarot": {
+        "name": "The Chariot",
+        "number": 7,
+        "symbolism": "Represents victory and control"
+      },
+      "consciousness": "Sensitive consciousness, an awakened perception that explores the depth of sensations to achieve inner harmony",
+      "yetsiratic": { "correspondence": "Gemini", "glyph": "♊", "meaning": "Thought" },
+      "cinerMeaning": "Embodies the quest for inner balance, victory over oneself"
+    },
+    {
+      "num": 18,
+      "id": "item18",
+      "connection": {
+        "startId": "item3",
+        "endId": "item5",
+        "description": "Binah to Geburah, representing inner strength"
+      },
+      "letter": { "number": 8, "hebrew": "ח", "name": "Heith", "meaning": "Enclosure" },
+      "tarot": {
+        "name": "Justice",
+        "number": 8,
+        "symbolism": "Represents fairness and balance"
+      },
+      "consciousness": "Protective consciousness, a flow of energy that strengthens the spirit and supports discipline in the pursuit of justice",
+      "yetsiratic": { "correspondence": "Cancer", "glyph": "♋", "meaning": "Memory" },
+      "cinerMeaning": "Symbolizes protection and discipline"
+    },
+    {
+      "num": 19,
+      "id": "item19",
+      "connection": {
+        "startId": "item4",
+        "endId": "item5",
+        "description": "Hesed to Geburah, embodying the balance between grace and severity"
+      },
+      "letter": { "number": 9, "hebrew": "ט", "name": "Teith", "meaning": "Serpent" },
+      "tarot": {
+        "name": "The Hermit",
+        "number": 9,
+        "symbolism": "Represents inner wisdom"
+      },
+      "consciousness": "Inner consciousness, a subtle light that guides the search for truth and nourishes authentic wisdom",
+      "yetsiratic": { "correspondence": "Leo", "glyph": "♌", "meaning": "Creativity" },
+      "cinerMeaning": "Illustrates the search for spiritual truth"
+    },
+    {
+      "num": 20,
+      "id": "item20",
+      "connection": {
+        "startId": "item4",
+        "endId": "item6",
+        "description": "Hesed to Tiphereth, symbolizing the path of compassion"
+      },
+      "letter": { "number": 10, "hebrew": "י", "name": "Yod", "meaning": "Hand" },
+      "tarot": {
+        "name": "Wheel of Fortune",
+        "number": 10,
+        "symbolism": "Represents fate and cycles"
+      },
+      "consciousness": "Cyclical consciousness, a deep understanding of the rhythms of life and divine destiny",
+      "yetsiratic": { "correspondence": "Virgo", "glyph": "♍", "meaning": "Action" },
+      "cinerMeaning": "Symbolizes the cycles of divine manifestation"
+    },
+    {
+      "num": 21,
+      "id": "item21",
+      "connection": {
+        "startId": "item4",
+        "endId": "item7",
+        "description": "Hesed to Netsah, embodying the victory of love"
+      },
+      "letter": { "number": 20, "hebrew": "כ", "name": "Kaph", "meaning": "Palm" },
+      "tarot": {
+        "name": "Strength",
+        "number": 11,
+        "symbolism": "Represents spiritual strength"
+      },
+      "consciousness": "Receptive consciousness, a total openness to divine grace that nourishes the soul and inspires righteous action",
+      "yetsiratic": { "correspondence": "Jupiter", "glyph": "♃", "meaning": "Power" },
+      "cinerMeaning": "Represents the reception of divine grace"
+    },
+    {
+      "num": 22,
+      "id": "item22",
+      "connection": {
+        "startId": "item5",
+        "endId": "item6",
+        "description": "Geburah to Tiphereth, symbolizing the balance of forces"
+      },
+      "letter": { "number": 30, "hebrew": "ל", "name": "Lamed", "meaning": "Ox-Goad" },
+      "tarot": {
+        "name": "The Hanged Man",
+        "number": 12,
+        "symbolism": "Represents sacrifice and transformation"
+      },
+      "consciousness": "Sacrificial consciousness, a confident surrender that transforms the being and reveals hidden wisdom",
+      "yetsiratic": { "correspondence": "Libra", "glyph": "♎", "meaning": "Balance" },
+      "cinerMeaning": "Embodies the sacrifice necessary for spiritual evolution"
+    },
+    {
+      "num": 23,
+      "id": "item23",
+      "connection": {
+        "startId": "item5",
+        "endId": "item8",
+        "description": "Geburah to Hod, symbolizing purifying water"
+      },
+      "letter": { "number": 40, "hebrew": "מ", "name": "Mem", "meaning": "Water" },
+      "tarot": {
+        "name": "Death",
+        "number": 13,
+        "symbolism": "Represents transformation and renewal"
+      },
+      "consciousness": "Purifying consciousness, a regenerating flow that transforms and renews the being in the depth of its essence",
+      "yetsiratic": { "correspondence": "Water", "glyph": "▽", "meaning": "Emotion" },
+      "cinerMeaning": "Embodies purification and change"
+    },
+    {
+      "num": 24,
+      "id": "item24",
+      "connection": {
+        "startId": "item6",
+        "endId": "item7",
+        "description": "Tiphereth to Netsah, representing continuity"
+      },
+      "letter": { "number": 50, "hebrew": "נ", "name": "Noun", "meaning": "Fish" },
+      "tarot": {
+        "name": "Temperance",
+        "number": 14,
+        "symbolism": "Represents moderation and harmony"
+      },
+      "consciousness": "Imaginative consciousness, an inner vision that embraces the fluidity of life and fosters universal harmony",
+      "yetsiratic": { "correspondence": "Scorpio", "glyph": "♏", "meaning": "Imagination" },
+      "cinerMeaning": "Symbolizes fluidity and adaptation"
+    },
+    {
+      "num": 25,
+      "id": "item25",
+      "connection": {
+        "startId": "item6",
+        "endId": "item9",
+        "description": "Tiphereth to Yesod, embodying support"
+      },
+      "letter": { "number": 60, "hebrew": "ס", "name": "Samech", "meaning": "Support" },
+      "tarot": {
+        "name": "The Devil",
+        "number": 15,
+        "symbolism": "Represents temptations and hindrances"
+      },
+      "consciousness": "Tested consciousness, a lucid state that transcends temptations and supports faith in spiritual ascent",
+      "yetsiratic": { "correspondence": "Sagittarius", "glyph": "♐", "meaning": "Faith" },
+      "cinerMeaning": "Highlights challenges to overcome"
+    },
+    {
+      "num": 26,
+      "id": "item26",
+      "connection": {
+        "startId": "item6",
+        "endId": "item8",
+        "description": "Tiphereth to Hod, symbolizing the divine eye"
+      },
+      "letter": { "number": 70, "hebrew": "ע", "name": "Ayin", "meaning": "Eye" },
+      "tarot": {
+        "name": "The Tower",
+        "number": 16,
+        "symbolism": "Represents rupture and revelation"
+      },
+      "consciousness": "Renewed consciousness, a spiritual flash that unveils hidden truths and sparks the awakening of the soul",
+      "yetsiratic": { "correspondence": "Capricorn", "glyph": "♑", "meaning": "Transformation" },
+      "cinerMeaning": "Embodies sudden awakening and awareness"
+    },
+    {
+      "num": 27,
+      "id": "item27",
+      "connection": {
+        "startId": "item7",
+        "endId": "item8",
+        "description": "Netsah to Hod, representing communication"
+      },
+      "letter": { "number": 80, "hebrew": "פ", "name": "Phé", "meaning": "Mouth" },
+      "tarot": {
+        "name": "The Star",
+        "number": 17,
+        "symbolism": "Represents hope and inspiration"
+      },
+      "consciousness": "Expressive consciousness, a deep intimacy with the sacred word that allows communication of the universe's beauty",
+      "yetsiratic": { "correspondence": "Venus", "glyph": "♀", "meaning": "Beauty" },
+      "cinerMeaning": "Symbolizes expression and sharing"
+    },
+    {
+      "num": 28,
+      "id": "item28",
+      "connection": {
+        "startId": "item7",
+        "endId": "item9",
+        "description": "Netsah to Yesod, symbolizing fidelity"
+      },
+      "letter": { "number": 90, "hebrew": "צ", "name": "Tsadé", "meaning": "Hook" },
+      "tarot": {
+        "name": "The Moon",
+        "number": 18,
+        "symbolism": "Represents the subconscious and illusions"
+      },
+      "consciousness": "Natural consciousness, an intuitive receptivity that embraces the unknown and trusts subtle guidance",
+      "yetsiratic": { "correspondence": "Aquarius", "glyph": "♒", "meaning": "Knowledge" },
+      "cinerMeaning": "Embodies trust in the unknown"
+    },
+    {
+      "num": 29,
+      "id": "item29",
+      "connection": {
+        "startId": "item7",
+        "endId": "item10",
+        "description": "Netsah to Malkuth, embodying the cycle of life"
+      },
+      "letter": { "number": 100, "hebrew": "ק", "name": "Qôf", "meaning": "Back of Head" },
+      "tarot": {
+        "name": "The Sun",
+        "number": 19,
+        "symbolism": "Represents joy and success"
+      },
+      "consciousness": "Embodied consciousness, a deep vitality that celebrates the manifestation of the divine in matter and fulfills the cycle of life",
+      "yetsiratic": { "correspondence": "Pisces", "glyph": "♓", "meaning": "Realization" },
+      "cinerMeaning": "Symbolizes the manifestation of the divine on earth"
+    },
+    {
+      "num": 30,
+      "id": "item30",
+      "connection": {
+        "startId": "item8",
+        "endId": "item9",
+        "description": "Hod to Yesod, representing humility"
+      },
+      "letter": { "number": 200, "hebrew": "ר", "name": "Reish", "meaning": "Head" },
+      "tarot": {
+        "name": "Judgement",
+        "number": 20,
+        "symbolism": "Represents renewal and liberation"
+      },
+      "consciousness": "Consciousness of renewal, a global lucidity that awakens inner discernment and leads to the liberation of the spirit",
+      "yetsiratic": { "correspondence": "Mercury", "glyph": "☿", "meaning": "Communication" },
+      "cinerMeaning": "Embodies inner judgement and rebirth"
+    },
+    {
+      "num": 31,
+      "id": "item31",
+      "connection": {
+        "startId": "item8",
+        "endId": "item10",
+        "description": "Hod to Malkuth, representing purifying fire"
+      },
+      "letter": { "number": 300, "hebrew": "ש", "name": "Shin", "meaning": "Tooth" },
+      "tarot": {
+        "name": "The Fool",
+        "number": 0,
+        "symbolism": "Represents unlimited potential and the journey"
+      },
+      "consciousness": "Inextinguishable consciousness, a perpetual flame that initiates deep transformation and a new spiritual beginning",
+      "yetsiratic": { "correspondence": "Fire", "glyph": "△", "meaning": "Strength" },
+      "cinerMeaning": "Symbolizes the start of a new spiritual journey"
+    },
+    {
+      "num": 32,
+      "id": "item32",
+      "connection": {
+        "startId": "item9",
+        "endId": "item10",
+        "description": "Yesod to Malkuth, embodying truth"
+      },
+      "letter": { "number": 400, "hebrew": "ת", "name": "Tav", "meaning": "Cross" },
+      "tarot": {
+        "name": "The World",
+        "number": 21,
+        "symbolism": "Represents accomplishment and unity"
+      },
+      "consciousness": "Completed consciousness, an ultimate fullness that reveals the fundamental truth of existence and perfect union with the Source",
+      "yetsiratic": { "correspondence": "Moon", "glyph": "☽", "meaning": "Emotion" },
+      "cinerMeaning": "Embodies final realization and union with the divine"
+    }
+  ]
+}

@@ -1,17 +1,49 @@
 /*
-Responsive design
+@media (max-width: 650px), (max-height: 650px) {
 */
-@media (max-width: 650px) {
+
+
+@media  (max-height: 850px), (max-width: 850px) {
 
   :root {
-    --sephirah-size: min(15vw, 60px);
-    --font-size: min(2.5vw, 8px);
+    /* --sephirah-size: min(15vw, 72px); */
+    /* --font-size: min(2.5vw, 8px);
     --label-font-size: min(2vw, 8px);
+    --font-size-infini: var(--fs-9); */
+  }
+
+  .container {
+    
+    /* max-width: 350px ; */
+    /* max-height: 700px; */
+   
+     }
+
+  .sephirah {
+    box-shadow: none;
+  }
+  #pathCanvas {
+    filter: none;
+  }
+
+  .sephirah.visited::after,.label.visited::after {
+    filter: none;  box-shadow: none; 
+  }
+
+}
+
+@media (max-width: 650px), (max-height: 650px) {
+
+  :root {
+    /* --sephirah-size: min(15vw, 60px); */
+    /* --font-size: min(2.5vw, 8px);
+    --label-font-size: min(2vw, 8px);
+    --font-size-infini: var(--fs-8); */
   }
   
   
   h1 {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
@@ -21,26 +53,140 @@ Responsive design
   }
   
   .container {
-   height: calc(100vh - 6rem);
-
-
-    }
+    height: calc(100vh - 6rem);
+    max-width: 400px;
+  }
   }
   
-  @media (max-width: 500px) {
+  @media (max-width: 500px), (max-height: 500px) {
   
     :root {
-      --sephirah-size: min(20vw, 52px);
+      /* --sephirah-size: min(20vw, 52px); */
+      /* --font-size-infini: var(--fs-7); */
     }
   h1 {
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
     text-align: center;
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
+ 
   }
   
   .container {
     height: calc(100vh - 7rem);
+    max-width: 300px ;
   }
+
+
+  #volumeSlider {
+
+    display: none;
+
+  }
+
+  #imgTarot {   
+    
+    max-width: 55px;
+    
+  }
+
+  #imgTarotSephirah {    
+    max-width: 55px;
+    margin: 0.2rem;
+   
   }
   
+  
+  
+
+  }
+  
+
+
+
+
+
+
+  /* 1) Gérer prefers-reduced-motion 
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .sephirah,
+  #pathCanvas {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+*/
+
+/* Utilisateur qui ont activé réduire les mouvements dans les paramètres d'accessibilité */
+/* @media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+} */
+
+@media print {
+  .fullscreen-button,
+  .sound-control-button,
+  #volumeSlider {
+    display: none;
+  }
+}
+
+
+
+/* voir js performence-check.js */
+
+
+/* Supprime les effets de halo et d'animation autour des Séphiroth */
+ .low-performance .sephirah::after {
+  /* display: none !important; */
+}
+
+/* Supprime l'effet de glow sur les chemins */
+.low-performance #pathCanvas {
+   filter: none !important; 
+} 
+
+/* Désactive les animations globales */
+.low-performance * {
+   /* animation: none !important;  */
+  /* transition: none !important; */
+} 
+
+/* Réduit les ombres et effets de survol */
+.low-performance .sephirah {
+  /* box-shadow: none !important; */
+  /* transform: scale(1) !important; */
+} 
+
+/* Masque les particules dynamiques */
+.low-performance canvas {
+  /* display: none !important; */
+} 
+
+.low-performance #tipherethSunCanvas { 
+  display: none !important;
+}
+
+.low-performance #ketherParticlesCanvas { 
+  display: none !important;
+}
+
+@media (max-width: 500px) {
+  .site-header {
+    padding: 0.5rem;
+  }
+
+  .reload-button {
+    font-size: 0.8rem;
+    padding: 8px !important;
+  }
+
+  .language-menu {
+    font-size: 0.8rem;
+  }
+}
