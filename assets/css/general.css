@@ -115,6 +115,7 @@
   padding: 0;  
   /*Bordure pour débogage */
   box-shadow: 0 0 0 var(--debug-border-width) red inset;
+
 }
 
 
@@ -165,6 +166,10 @@ body {
 
   opacity: 0; /* L'opacité initiale */
   animation: fadeIn 0.75s ease-in-out forwards; /* L'animation */
+
+  
+
+
   
 }
 
@@ -195,6 +200,11 @@ Conteneur principal pour le titre et l'arbre
   /* Fonctionnalité et interactions */
   transition: height 0.3s ease; /* Animation fluide pour les changements de hauteur */
   /*overflow: visible; /* Permet aux éléments enfants de dépasser si nécessaire */
+
+  /* background: url('/assets/img/illu-2.0888e029.svg') no-repeat center center fixed;
+  background-size: 100px; */
+
+ 
 }
 
 /*
@@ -214,8 +224,7 @@ h1 {
   word-wrap: break-word;
   white-space: normal;
  
-  /* border-top: 0.2px solid rgba(255, 255, 255, 0.7);*/
-  /*padding-bottom: 5px;*/
+
   width: auto; /* Étend la largeur pour les petits écrans */  
   
   /* Quelques ajustements de mise en page */
@@ -251,7 +260,7 @@ Conteneur principal du canvas et des séphiroth
   position: relative;  /* Nécessaire pour positionner les éléments enfants */
   width: 100%; /* S'adapte à la largeur de l'écran */
  /* aspect-ratio: 1 / 1.6; /* Maintient les proportions de l'arbre */
-  max-width: 840px; /*Définir une largeur maximale */
+  max-width: 840px; /* Définir une largeur maximale */
   height: 100%;/*calc(100vh - 5rem); /* Laisse de l'espace pour le titre */
   /* max-height: 90dvh; */
   /*max-height: 1000px; /* Empêche le débordement vertical */
@@ -324,7 +333,7 @@ Conteneur principal du canvas et des séphiroth
   animation: fadeIn 1s ease-in-out forwards;
   /* touch-action: none; /* Empêche le scroll ou pinch-zoom */ 
   
-  transform-origin: center; /* Centre l'agrandissement */
+  transform-origin: center; /* Centre l'agrandissement */  
 
 }
 
@@ -367,6 +376,7 @@ Effet au survol
   color: white;
   background: radial-gradient(circle, #ffaa00, #fdd835);
   box-shadow: 0 0 50px rgba(255, 223, 0, 1), 0 0 100px rgba(255, 223, 0, 0.8);  
+  
 }
 /* particules en mouvement autour de chaque Séphirah, symbolisant l'énergie divine */
 .sephirah::after {
@@ -550,6 +560,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
   top: 89%;
   left: 50%;
   background: radial-gradient(circle, #663300, #8d6e63);
+  
 }
 
 /**********************************
@@ -570,6 +581,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 #daath {
   top: 25.2%;
   left: 50%;
+
 }
 
 
@@ -577,6 +589,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 .sephirah.daath {
   animation: pulse 2s infinite;
   opacity: 1; 
+  
 }
 
 @keyframes pulse {
@@ -612,9 +625,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 }
 
 
-
 /* Code pour bouton plein écran */
-
 .fullscreen-button {
   position: fixed;
   /*top: 3px;*/
@@ -654,7 +665,6 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
       pointer-events: auto !important;
   }
 }
-
 
 
 /* Style pour le symbole de l'infini */
@@ -1293,3 +1303,5 @@ h1 span:focus {
 .reload-button:hover {
   background: rgba(0,0,0,0.7);
 }
+
+

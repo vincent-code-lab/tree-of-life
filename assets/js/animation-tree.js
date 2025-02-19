@@ -6,10 +6,6 @@
    - Hesed (item4) : Particules flottantes blanches
    - Tipheret (item6) : Rayons dorés
    ========================================================================= */
-
-  
-
-
    
 // Gestionnaire global des animations
 const SephirotAnimations = {
@@ -638,9 +634,6 @@ function drawSmoothSunlikeIrradiation() {
     drawSmoothSunlikeIrradiation();
   });
   
-
-
-
 
 // Partie 2 : Animation des particules autour de Kether - comment des particules d'or ou des étoiles autour de Kether (Séphirah 1) pour symboliser la Couronne.
 

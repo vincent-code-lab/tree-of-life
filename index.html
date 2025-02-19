@@ -71,26 +71,28 @@
       </div>
   </header>
   <!-- Début  :  Conteneur principal pour gérer la flexibilité entre le titre et l'arbre -->
-  <main class="main-container" role="main" aria-label="Arbre de Vie Séphirotique">
+  <main class="main-container" role="main" aria-label="Arbre de Vie">
 
 <!-- <iframe src="assets/img/tarot/1.svg" width="600" height="1000"></iframe> -->
 <!-- <embed src="assets/img/tarot/1.svg" width="600" height="1000" type="image/svg+xml"> -->
 
+  <!-- <image class="fond" id="fond" src="assets/img/illu-2.0888e029.svg"></image> -->
+
     <!-- Début : Conteneur interactif -->     
     <section class="container" id="container">
-      <!-- Canevas utilisé pour dessiner les chemins entre les Séphiroth -->        
+      
       <canvas id="tipherethSunCanvas"></canvas>    
       <canvas id="flameCanvas2"></canvas>               
       <canvas id="geburahFlameCanvas"></canvas>
       <canvas id="hesedWaterCanvas"></canvas>
+      <!-- Canvas pour les particules dorées autour de Kether -->
+      <canvas id="ketherParticlesCanvas"></canvas>
       <!-- <canvas id="crystalsCanvas"></canvas> -->
-      
+      <!-- Canevas utilisé pour dessiner les chemins entre les Séphiroth -->    
       <canvas id="pathCanvas"></canvas>
      
       <!-- Les 10 séphiroth existantes -->
       <div class="sephirah item1" id="item1" tabindex="0"></div>
-      <!-- Canvas pour les particules dorées autour de Kether -->
-      <canvas id="ketherParticlesCanvas"></canvas>
       <div class="sephirah item2" id="item2" tabindex="0"></div>
       <div class="sephirah item3" id="item3" tabindex="0"></div>
       <div class="sephirah item4" id="item4" tabindex="0"></div>
