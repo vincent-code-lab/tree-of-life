@@ -63,46 +63,37 @@
 
 
 /* Font-size avec clamp() et calc() */
---fs-4: clamp(0.2rem, calc(0.15vw + 0.15rem), 0.25rem);
---fs-5: clamp(0.25rem, calc(0.18vw + 0.2rem), 0.3125rem);
---fs-6: clamp(0.3rem, calc(0.2vw + 0.25rem), 0.375rem);
---fs-7: clamp(0.35rem, calc(0.25vw + 0.3rem), 0.4375rem);
---fs-8: clamp(0.4rem, calc(0.3vw + 0.35rem), 0.5rem);
---fs-9: clamp(0.45rem, calc(0.35vw + 0.4rem), 0.5625rem);
---fs-10: clamp(0.5rem, calc(0.4vw + 0.45rem), 0.625rem);
---fs-11: clamp(0.55rem, calc(0.45vw + 0.5rem), 0.6875rem);
---fs-11-9: clamp(0.6rem, calc(0.5vw + 0.55rem), 0.74375rem);
---fs-12: clamp(0.625rem, calc(0.55vw + 0.6rem), 0.75rem);
---fs-13: clamp(0.7rem, calc(0.6vw + 0.65rem), 0.8125rem);
---fs-14: clamp(0.75rem, calc(0.7vw + 0.7rem), 0.875rem);
---fs-16: clamp(0.875rem, calc(0.8vw + 0.8rem), 1rem);
---fs-18: clamp(1rem, calc(0.9vw + 0.9rem), 1.125rem);
---fs-19: clamp(1.0625rem, calc(1vw + 1rem), 1.1875rem);
---fs-20: clamp(1.125rem, calc(1.1vw + 1.1rem), 1.25rem);
---fs-24: clamp(1.375rem, calc(1.2vw + 1.3rem), 1.5rem);
---fs-30: clamp(1.75rem, calc(1.5vw + 1.5rem), 1.875rem);
---fs-36: clamp(2rem, calc(1.75vw + 1.8rem), 2.25rem);
---fs-42: clamp(2.375rem, calc(2vw + 2.2rem), 2.625rem);
---fs-50: clamp(2.75rem, calc(2.5vw + 2.5rem), 3.125rem);
---fs-72: clamp(4rem, calc(3vw + 3.5rem), 4.5rem);
---fs-90: clamp(5rem, calc(4vw + 4.5rem), 5.625rem);
+--fs-4: clamp(0.2rem, calc(0.15vmin + 0.15rem), 0.25rem);
+--fs-5: clamp(0.25rem, calc(0.18vmin + 0.2rem), 0.3125rem);
+--fs-6: clamp(0.3rem, calc(0.2vmin + 0.25rem), 0.375rem);
+--fs-7: clamp(0.35rem, calc(0.25vmin + 0.3rem), 0.4375rem);
+--fs-8: clamp(0.4rem, calc(0.3vmin + 0.35rem), 0.5rem);
+--fs-9: clamp(0.45rem, calc(0.35vmin + 0.4rem), 0.5625rem);
+--fs-10: clamp(0.5rem, calc(0.4vmin + 0.45rem), 0.625rem);
+--fs-11: clamp(0.55rem, calc(0.45vmin + 0.5rem), 0.6875rem);
+--fs-11-9: clamp(0.6rem, calc(0.5vmin + 0.55rem), 0.74375rem);
+--fs-12: clamp(0.625rem, calc(0.55vmin + 0.6rem), 0.75rem);
+--fs-13: clamp(0.7rem, calc(0.6vmin + 0.65rem), 0.8125rem);
+--fs-14: clamp(0.75rem, calc(0.7vmin + 0.7rem), 0.875rem);
+--fs-16: clamp(0.875rem, calc(0.8vmin + 0.8rem), 1rem);
+--fs-18: clamp(1rem, calc(0.9vmin + 0.9rem), 1.125rem);
+--fs-19: clamp(1.0625rem, calc(1vmin + 1rem), 1.1875rem);
+--fs-20: clamp(1.125rem, calc(1.1vmin + 1.1rem), 1.25rem);
+--fs-24: clamp(1.375rem, calc(1.2vmin + 1.3rem), 1.5rem);
+--fs-30: clamp(1.75rem, calc(1.5vmin + 1.5rem), 1.875rem);
+--fs-36: clamp(2rem, calc(1.75vmin + 1.8rem), 2.25rem);
+--fs-42: clamp(2.375rem, calc(2vmin + 2.2rem), 2.625rem);
+--fs-50: clamp(2.75rem, calc(2.5vmin + 2.5rem), 3.125rem);
+--fs-72: clamp(4rem, calc(3vmin + 3.5rem), 4.5rem);
+--fs-90: clamp(5rem, calc(4vmin + 4.5rem), 5.625rem);
 
 
-  --sephirah-size: clamp(3.5rem, calc(8vw + 2rem), 6.5rem);/*--sephirah-size: clamp(3.8dvh, calc(9.5vw + 9rem), 8.7dvh); /* var(--fs-90); /*min(10vw, 90px);*/
-  --font-size-sephirah: clamp(0.7rem, calc(0.6vw + 0.6rem), 0.9rem);
-  --label-font-size: clamp(0.8rem, calc(0.7vw + 0.7rem), 1rem);
-  /*--font-size-sephirah: 70%;/*clamp(0.125rem, calc(0.55vw + 0.6rem), 0.75rem); /*min(1.5vw, 11.9px);*/
-  --font-size-infini: var(--fs-12);/*min(1.9vw, 13px);*/
-  /*--label-font-size: var(--fs-13);/*min(2vw, 13px);*/
-  --primary-color: #ffd700;
-  --h1-color: #ffffff;
-
-  
-
-    /* Tailles spécifiques pour l'arbre 
-    --sephirah-size: clamp(3.5rem, calc(8vw + 2rem), 8rem);
-    --font-size-sephirah: clamp(0.7rem, calc(0.6vw + 0.6rem), 0.9rem);
-    --label-font-size: clamp(0.8rem, calc(0.7vw + 0.7rem), 1rem);*/
+--sephirah-size: clamp(3.5rem, calc(8vmin + 2rem), 6.5rem);/*--sephirah-size: clamp(3.8dvh, calc(9.5vw + 9rem), 8.7dvh); /* var(--fs-90); /*min(10vw, 90px);*/
+--font-size-sephirah: clamp(0.7rem, calc(0.6vmin + 0.6rem), 0.9rem);
+--label-font-size: clamp(0.6rem, calc(0.45vmin + 0.6rem), 0.75rem);
+--font-size-infini: var(--fs-12);/*min(1.9vw, 13px);*/
+--primary-color: #ffd700;
+--h1-color: #ffffff;
 }
 
 /* 
@@ -116,27 +107,24 @@
     Cela permet de commencer avec une mise en page propre et d'ajouter des marges spécifiques selon les besoins.
   - padding: 0;
     Supprime tout padding par défaut de tous les éléments.
-    Cela permet également de commencer avec une mise en page propre et d'ajouter des paddings spécifiques selon les besoins.
+    Cela permet aussi de commencer avec une mise en page propre et d'ajouter des paddings spécifiques selon les besoins.
 */
 *, ::before, ::after {
   box-sizing: border-box; 
   margin:0;
   padding: 0;  
-
   /*Bordure pour débogage */
   box-shadow: 0 0 0 var(--debug-border-width) red inset;
-
-
 }
 
 
 html,
 body {
- /* background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 0, 0.1) 100%);*/
- /*background: radial-gradient(circle, rgba(249, 249, 249, 0) 50%, rgba(255, 255, 255, 0.164) 100%);*/
-/* background: linear-gradient(to bottom, #000000, #0e0e0e); /* Dégradé du noi vers une teinte grise */ 
-min-height: 100dvh; /* Utilise la hauteur dynamique réelle  tient  compte de la barre d'adresse sur mobile*/
-min-width: 100dvw;
+ /* background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 0, 0.1) 100%);
+ background: radial-gradient(circle, rgba(249, 249, 249, 0) 50%, rgba(255, 255, 255, 0.164) 100%);
+background: linear-gradient(to bottom, #000000, #0e0e0e); /* Dégradé du noi vers une teinte grise */
+/*min-height: 100dvh; /* Utilise la hauteur dynamique réelle  tient  compte de la barre d'adresse sur mobile*/
+/*min-width: 100dvw;*/
 }
 
 /*
@@ -150,9 +138,12 @@ body {
   flex-direction: column;
   justify-content: center;  /* flex-start;  Aligne les éléments le long de l'axe principal (vertical avec column), en haut */
   align-items: center; /* Centre les éléments sur l'axe transversal (horizontal avec column) */
+  
   height:  100vh;
-  width: 100%;
-  min-height: 100vh;
+  width: 100vw;
+ /* min-height: 100vh;  */
+
+
  /* min-height: 100vh; /* Empêche le contenu de déborder */
  /* min-width: 100vw;  /* Empêche le contenu de déborder */
 
@@ -175,9 +166,6 @@ body {
   opacity: 0; /* L'opacité initiale */
   animation: fadeIn 0.75s ease-in-out forwards; /* L'animation */
   
-  
-
- /*  border: var(--debug-border-width)  solid #fcfcfc; Bordure pour débogage*/
 }
 
 /* Ajoutez une animation fade-in au body */
@@ -207,8 +195,6 @@ Conteneur principal pour le titre et l'arbre
   /* Fonctionnalité et interactions */
   transition: height 0.3s ease; /* Animation fluide pour les changements de hauteur */
   /*overflow: visible; /* Permet aux éléments enfants de dépasser si nécessaire */
-  margin:0;
-  /* border: var(--debug-border-width) solid #f2ff00; Bordure pour débogage */
 }
 
 /*
@@ -237,8 +223,7 @@ h1 {
 
  /* Réduire légèrement le padding */
  padding: 0.2%;
- /*margin-bottom: 1rem; /* Ajouter une marge en bas du titre */
-  /* border: var(--debug-border-width) solid #15ff11; Bordure pour débogage */
+
 }
 
 /* Animation du texte uniquement */
@@ -271,8 +256,6 @@ Conteneur principal du canvas et des séphiroth
   /* max-height: 90dvh; */
   /*max-height: 1000px; /* Empêche le débordement vertical */
   overflow: visible; /* Permet de voir les éléments dépassant du conteneur */
-  /* transform-origin: top left; Pour autoriser l'échelle, le scale */
- /* border: var(--debug-border-width)  solid #0408ea;  Bordure pour débogage */
 }
 
 /* Hallo vert sur les chemins clignotant */
@@ -287,13 +270,13 @@ Conteneur principal du canvas et des séphiroth
   /* Utiliser un seul drop-shadow pour alléger le rendu */
   filter: drop-shadow(0 0 10px rgba(140, 255, 0, 0.95));
   
-  /* Animation plus lente pour réduire la fréquence des changements 
-  animation: glow 0s infinite alternate;*/
+  /* Animation plus lente pour réduire la fréquence des changements */
+  /* animation: glow 0s infinite alternate; */
   
-  /* Indiquer au navigateur que le filtre va changer 
-  will-change: filter;*/
+  /* Indiquer au navigateur que le filtre va changer */
+  /* will-change: filter; */
 }
-/*
+/* 
 @keyframes glow {
   0% {
     filter: drop-shadow(0 0 10px rgba(140, 255, 0, 0.95));
@@ -301,15 +284,8 @@ Conteneur principal du canvas et des séphiroth
   100% {
     filter: drop-shadow(0 0 15px rgba(140, 255, 0, 1));
   }
-}*/
+} */
 
-/* Pour les écrans plus petits, désactivez l'animation et l'effet pour améliorer les performances 
-@media (max-width: 800px) {
-  #pathCanvas {
-    filter: none;
-    animation: none;
-  }
-}*/
 
 
 
@@ -346,7 +322,10 @@ Conteneur principal du canvas et des séphiroth
   /* Animation d'apparition au chargement */
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
-  touch-action: none; /* Empêche le scroll ou pinch-zoom */ 
+  /* touch-action: none; /* Empêche le scroll ou pinch-zoom */ 
+  
+  transform-origin: center; /* Centre l'agrandissement */
+
 }
 
 /* Animation d'apparition au chargement */
@@ -432,12 +411,15 @@ Effet au survol
   z-index: 3;
   user-select: text;
   pointer-events: auto; /* Autorise le survol pour le tooltip */
-  transition: opacity 0.3s ease;
+  /* transition: opacity 0.3s ease; */
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
   cursor: pointer;
+  transform-origin: center; /* Centre l'agrandissement */
+  will-change: transform; /* Optimize l'animation */
 }
 
 .label:hover {
- /* transform: scale(1.1);*/
+  transform: scale(1.5);
   color: var(--primary-color);
   text-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
 }
@@ -586,7 +568,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 }
 
 #daath {
-  top: 25%;
+  top: 25.2%;
   left: 50%;
 }
 
@@ -729,7 +711,6 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 }
 
 
-
 #tipherethSunCanvas {
   position: absolute;
   top: 0;
@@ -737,9 +718,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
   width: 100%;
   height: 100%;
   z-index: 0; /* Derrière les autres éléments */
-  pointer-events: none; /* Permet d’interagir avec les éléments au-dessus */
- 
-  
+  pointer-events: none; /* Permet d’interagir avec les éléments au-dessus */  
 }
 
 
@@ -754,8 +733,6 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 } 
 
 
-
-
 #geburahFlameCanvas {
   position: absolute;
   top: 0;
@@ -765,7 +742,6 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
   z-index: 0; /* Derrière les autres éléments */
   pointer-events: none; /* Permet d’interagir avec les éléments au-dessus */
 }
-
 
 
 #hesedWaterCanvas {
@@ -812,7 +788,7 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
 }
 
 .sound-control-button:hover {
-  /*background: rgba(0, 0, 0, 1); /* Accentuer le fond au survol */
+  /*background: rgba(0, 0, 0, 1); Accentuer le fond au survol */
 }
 
 .sound-control-button i {
@@ -939,9 +915,6 @@ Positions des 10 Séphiroth (IDs "item1" à "item10")
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
-
-
-
   /* margin-left: auto;
   margin-right: auto;
   display: block; Assurez-vous que l'élément est un bloc */
@@ -1124,11 +1097,6 @@ h1 span:focus {
     }
 
 
-
-
-
-
-
     .meditation-active {
       background-color: rgba(0, 128, 255, 0.2);
       border: 2px solid blue;
@@ -1139,13 +1107,6 @@ h1 span:focus {
       background-color: rgba(244, 12, 209, 0.2);
       border: 15px solid rgb(255, 17, 0);
     }
-
-
-
-
-
-
-
 
 
 

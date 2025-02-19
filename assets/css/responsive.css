@@ -1,23 +1,7 @@
-/*
-@media (max-width: 650px), (max-height: 650px) {
-*/
-
 
 @media  (max-height: 850px), (max-width: 850px) {
 
-  :root {
-    /* --sephirah-size: min(15vw, 72px); */
-    /* --font-size: min(2.5vw, 8px);
-    --label-font-size: min(2vw, 8px);
-    --font-size-infini: var(--fs-9); */
-  }
 
-  .container {
-    
-    /* max-width: 350px ; */
-    /* max-height: 700px; */
-   
-     }
 
   .sephirah {
     box-shadow: none;
@@ -34,48 +18,21 @@
 
 @media (max-width: 650px), (max-height: 650px) {
 
-  :root {
-    /* --sephirah-size: min(15vw, 60px); */
-    /* --font-size: min(2.5vw, 8px);
-    --label-font-size: min(2vw, 8px);
-    --font-size-infini: var(--fs-8); */
-  }
   
-  
-  h1 {
-    /* font-size: 1rem; */
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-
   #ketherParticlesCanvas {
     display: none;
   }
   
-  .container {
-    height: calc(100vh - 6rem);
-    max-width: 400px;
+
+  #tipherethSunCanvas {
+    display: none;
   }
+
   }
   
   @media (max-width: 500px), (max-height: 500px) {
   
-    :root {
-      /* --sephirah-size: min(20vw, 52px); */
-      /* --font-size-infini: var(--fs-7); */
-    }
-  h1 {
-    /* font-size: 0.9rem; */
-    text-align: center;
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
- 
-  }
-  
-  .container {
-    height: calc(100vh - 7rem);
-    max-width: 300px ;
-  }
+
 
 
   #volumeSlider {
@@ -95,9 +52,7 @@
     margin: 0.2rem;
    
   }
-  
-  
-  
+   
 
   }
   
@@ -152,7 +107,7 @@
 } 
 
 /* Désactive les animations globales */
-.low-performance * {
+.low-performance  {
    /* animation: none !important;  */
   /* transition: none !important; */
 } 
@@ -176,7 +131,7 @@
   display: none !important;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .site-header {
     padding: 0.5rem;
   }
@@ -189,4 +144,4 @@
   .language-menu {
     font-size: 0.8rem;
   }
-}
+} */

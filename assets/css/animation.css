@@ -1,8 +1,8 @@
-/* Animations plus fluides */
+/* Animations plus fluides 
 .sephirah {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+}*/
 
 /* État actif amélioré 
 .sephirah:active {
@@ -10,7 +10,7 @@
   box-shadow: 0 0 15px var(--glow-color);
 }*/
 
-/* Retour visuel du chargement */
+/* Retour visuel du chargement 
 .loading::before {
   content: '';
   position: absolute;
@@ -19,7 +19,7 @@
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-
+*/
 
 
 

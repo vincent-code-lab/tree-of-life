@@ -28,7 +28,7 @@ const SephirotAnimations = {
         }
     },
 
-    // Geburah Animation (flammes rouges)
+    // Geburah Animation (feu)
     drawFlamesForGeburah() {
       if (this.animations.geburah.frame) return; // Ne démarre pas si déjà en cours
         const canvas = document.getElementById('geburahFlameCanvas');
@@ -123,6 +123,7 @@ const SephirotAnimations = {
             this.animations.geburah.timeout = null;
         }
     },
+
 
     // Hesed Animation (particules flottantes)
     drawFloatingParticlesForHesed() {
@@ -328,6 +329,7 @@ const SephirotAnimations = {
         const geburahElement = document.getElementById('item5');
         if (geburahElement) {
             geburahElement.addEventListener('click', () => {
+              console.log('Geburah clicked');
                 this.stopFlamesForGeburah();
                 this.drawFlamesForGeburah();
                 this.animations.geburah.timeout = setTimeout(
@@ -459,98 +461,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-/*
-
-function drawFlamesForMalkuth() {
-  const canvas = document.getElementById('malkuthFlameCanvas');
-  const container = document.getElementById('container');
-  const malkuth = document.getElementById('item10');
-
-  if (!canvas || !container || !malkuth) {
-    console.error("Canevas ou élément Malkhout non trouvé.");
-    return;
-  }
-
-  const ctx = canvas.getContext('2d');
-  const rect = container.getBoundingClientRect();
-  canvas.width = rect.width;
-  canvas.height = rect.height;
-
-  const malkuthRect = malkuth.getBoundingClientRect();
-  const centerX = malkuthRect.left - rect.left + malkuthRect.width / 2;
-  const centerY = malkuthRect.top - rect.top + malkuthRect.height / 2;
-
-  // Particules de flammes
-  const particles = [];
-  const maxParticles = 150;
-
-  function createParticle() {
-    return {
-      x: centerX + Math.random() * 60 - 30,
-      y: centerY + Math.random() * 10 - 5,
-      size: Math.random() * 20 + 10,
-      opacity: Math.random() * 0.5 + 0.5,
-      life: Math.random() * 50 + 50,
-      dx: Math.random() * 2 - 1,
-      dy: -Math.random() * 2 - 1,
-      hue: Math.random() * 30 + 10, // Couleurs plus chaudes (rouges/orangées)
-    };
-  }
-
-  function updateParticles() {
-    for (let i = particles.length - 1; i >= 0; i--) {
-      const p = particles[i];
-      p.x += p.dx;
-      p.y += p.dy;
-      p.size *= 0.95;
-      p.opacity *= 0.95;
-      p.life--;
-
-      if (p.life <= 0 || p.size < 1) {
-        particles.splice(i, 1);
-      }
-    }
-
-    while (particles.length < maxParticles) {
-      particles.push(createParticle());
-    }
-  }
-
-  function drawParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (const p of particles) {
-      ctx.beginPath();
-      const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size);
-      gradient.addColorStop(0, `hsla(${p.hue}, 100%, 50%, ${p.opacity})`);
-      gradient.addColorStop(0.5, `hsla(${p.hue + 10}, 100%, 50%, ${p.opacity * 0.7})`);
-      gradient.addColorStop(1, 'rgba(255, 69, 0, 0)');
-      ctx.fillStyle = gradient;
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  function animateFlames() {
-    updateParticles();
-    drawParticles();
-    requestAnimationFrame(animateFlames);
-  }
-
-  animateFlames();
-}
-
-// Appelez la fonction lors de l'initialisation
-document.addEventListener('DOMContentLoaded', () => {
-  drawFlamesForMalkuth();
-}); */
 
 
 
@@ -728,63 +638,7 @@ function drawSmoothSunlikeIrradiation() {
     drawSmoothSunlikeIrradiation();
   });
   
-  
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-// /* Pause des animations lorsque la page n'est plus visible */
-// document.addEventListener("visibilitychange", () => {
-//   if (document.hidden) {
-//     pauseAllAnimations();
-//   } else {
-//     resumeAllAnimations();
-//   }
-// });
-
-// function pauseAllAnimations() {
-//   // Arrête toutes les animations en cours
-//   if (SephirotAnimations && SephirotAnimations.animations) {
-//     cancelAnimationFrame(SephirotAnimations.animations.geburah.frame);
-//     cancelAnimationFrame(SephirotAnimations.animations.hesed.frame);
-//     cancelAnimationFrame(SephirotAnimations.animations.tipheret.frame);
-  
-//     console.log("Animations mises en pause");
-//   } else {
-//     console.error("SephirotAnimations ou ses animations ne sont pas définis.");
-//   }
-// }
-
-// function resumeAllAnimations() {
-//   // Relance les animations si nécessaire
-//   if (SephirotAnimations && SephirotAnimations.animations) {
-//     if (!SephirotAnimations.animations.geburah.frame) {
-//       SephirotAnimations.drawFlamesForGeburah();
-//     }
-//     if (!SephirotAnimations.animations.hesed.frame) {
-//       SephirotAnimations.drawFloatingParticlesForHesed();
-//     }
-//     if (!SephirotAnimations.animations.tipheret.frame) {
-//       SephirotAnimations.drawOnClickAura();
-//     }
-  
-//     console.log("Animations reprises");
-//   } else {
-//     console.error("SephirotAnimations ou ses animations ne sont pas définis.");
-//   }
-// }
 
 
 
@@ -1075,20 +929,3 @@ function initParticules() {
 }
 
   document.addEventListener('visibilitychange', handleVisibilityChange);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
